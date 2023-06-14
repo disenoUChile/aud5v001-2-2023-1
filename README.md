@@ -6,12 +6,12 @@
 
 **Validación de Pictogramas, basada en la prueba de significado de [Guemil](https://www.guemil.info/meaning/)**:
 
-→ https://disenouchile.github.io/aud5v001-2-2023-1/testing/
+→ [https://disenouchile.github.io/aud5v001-2-2023-1/testing/](https://disenouchile.github.io/aud5v001-2-2023-1/testing/)
 
 **Cierre de Unidad 2:**
 
-→ https://disenouchile.github.io/aud5v001-2-2023-1/p5u2
+→ [https://disenouchile.github.io/aud5v001-2-2023-1/p5u2](https://disenouchile.github.io/aud5v001-2-2023-1/p5u2)
 
 **Primer Proyecto de Unidad 3**
 
-→ https://disenouchile.github.io/aud5v001-2-2023-1/p5u3
+→ [https://disenouchile.github.io/aud5v001-2-2023-1/p5u3](https://disenouchile.github.io/aud5v001-2-2023-1/p5u3)
