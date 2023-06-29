@@ -12,13 +12,19 @@
                 }
             }
 
-            aside, footer{
+            aside,
+            footer {
                 font-size: 90%;
             }
 
             dl dd {
                 padding-left: 1rem;
                 text-indent: -1rem;
+            }
+            em {
+                font-style: normal;
+                font-weight: bold;
+            }
         </style>
     </head>
     <body>
@@ -98,10 +104,12 @@
                     </figcaption>
                 </figure>
                 <!--párrafo(s)-->
-                <p>
-                    Se ubica geográficamente en la Región de Los Lagos, Isla Grande de Chiloé, a 21 kilómetros al oeste de la zona urbana de Ancud, específicamente, en la zona entre el humedal de Quilo y la playa de Mar Brava-Bahía de
-                    Polocuhue. El proyecto contempla una superficie de ocupación de 1.000 hectáreas. El espacio geográfico utilizado en este proyecto corresponde a una localidad rural, en la cual viven alrededor de 5.000 personas.
-                </p>
+                <article class="col-11 col-sm-10 mx-auto">
+                    <p>
+                        Se ubica geográficamente en la Región de Los Lagos, Isla Grande de Chiloé, a 21 kilómetros al oeste de la zona urbana de Ancud, específicamente, en la zona entre el humedal de Quilo y la playa de Mar Brava-Bahía de
+                        Polocuhue. El proyecto contempla una superficie de ocupación de 1.000 hectáreas. El espacio geográfico utilizado en este proyecto corresponde a una localidad rural, en la cual viven alrededor de 5.000 personas.
+                    </p>
+                </article>
                 <article class="col-11 col-sm-10 mx-auto">
                     <h2>1.3 Ecopower</h2>
                     <p>
@@ -122,13 +130,15 @@
                         <p class="small text-body-secondary text-center">colocar link de la imagen</p>
                     </figcaption>
                 </figure>
-                <h2>2.2 Inversión</h2>
-                <p>La empresa representante de este proyecto es Ecopower, empresa chilena con capitales nacionales y suecos, que cuenta con una inversión de US$ 250 millones para el proyecto (Ecopower, 2017).</p>
-                <h2>2.3 Demanda y abastecimiento</h2>
-                <p>
-                    La finalidad de este proyecto es: satisfacer la demanda energética a nivel país. crear mejor interconectividad para la zona, terminando con el aislamiento del archipiélago No obstante, el abastecimiento energético
-                    corresponde a tal cantidad en donde la provincia de Chiloé no consume ni un 10% de esa energía generada.
-                </p>
+                <article class="col-11 col-sm-10 mx-auto">
+                    <h2>2.2 Inversión</h2>
+                    <p>La empresa representante de este proyecto es Ecopower, empresa chilena con capitales nacionales y suecos, que cuenta con una inversión de US$ 250 millones para el proyecto (Ecopower, 2017).</p>
+                    <h2>2.3 Demanda y abastecimiento</h2>
+                    <p>
+                        La finalidad de este proyecto es: satisfacer la demanda energética a nivel país. crear mejor interconectividad para la zona, terminando con el aislamiento del archipiélago No obstante, el abastecimiento energético
+                        corresponde a tal cantidad en donde la provincia de Chiloé no consume ni un 10% de esa energía generada.
+                    </p>
+                </article>
                 <!--párrafo(s)-->
                 <article class="col-11 col-sm-10 mx-auto">
                     <h1>III. Impactos</h1>
@@ -138,13 +148,15 @@
                         migratorias (perjudicadas por la contaminación acústica), además de las cientos de especies terrestres endémicas. Influye también negativamente en el avistamiento de cetáceos, ya que la zona de Mar Brava posee la
                         mayor concentración de ballenas azules del hemisferio sur.
                     </p>
-                    <!--gráfica rasterizada-->
-                    <figure class="col-sm-11 mx-auto">
-                        <img src="img/bocetos_aves_chiloe_pdf.pdf" class="w-100 mt-3" />
-                        <figcaption class="mt-1 mb-3">
-                            <p class="small text-body-secondary text-center">colocar link de la imagen</p>
-                        </figcaption>
-                    </figure>
+                </article>
+                <!--gráfica rasterizada-->
+                <figure class="col-sm-11 mx-auto">
+                    <img src="img/bocetos_aves_chiloe_pdf.pdf" class="w-100 mt-3" />
+                    <figcaption class="mt-1 mb-3">
+                        <p class="small text-body-secondary text-center">colocar link de la imagen</p>
+                    </figcaption>
+                </figure>
+                <article class="col-11 col-sm-10 mx-auto">
                     <h2>3.2 Impacto sociocultural</h2>
                     <p>
                         El discurso sustentable social, surgido por la comunidad y las organizaciones opositoras, se relaciona a discursos de las comunidades Huilliches que habitan la zona (aproximadamente 5000 habitantes), quienes hacen
@@ -176,9 +188,10 @@
                         <p class="small text-body-secondary text-center">Breve descriptor, prefieran vincular a la fuente.</p>
                     </figcaption>
                 </figure>
+                                <article class="col-11 col-sm-10 mx-auto">
+
                 <h2>4.2 Movimientos políticos</h2>
                 <!--párrafo(s)-->
-                <article class="col-11 col-sm-10 mx-auto">
                     <p>
                         Los principales movimientos y agrupaciones en contra son los siguientes: Comunidades indígenas huilliches (Aukako y Punta Chilen), Comunidades rurales afectadas, ciudadanos chilotes, Diputada Jenny Álvarez, Diputado
                         Fidel Espinoza, Concejal Rodolfo Norambuena, CECPAN, Centro de Conservación Cetácea de Chile, Movimiento por la Defensa del Territorio de Mar Brava Lacuy de Ancud, Macheros de Mar Brava, Sindicato Nueva Alianza,
@@ -251,40 +264,40 @@
             const datos = [
                 {
                     tema: "Basural de ropa en el Desierto de Atacama",
-                    carpeta: "atacama"
+                    carpeta: "atacama",
                 },
                 {
                     tema: "Mujeres y agua en San Pedro de Melipilla",
-                    carpeta: "melipilla"
+                    carpeta: "melipilla",
                 },
                 {
                     tema: "Planta de celulosa Licancel",
-                    carpeta: "licancel"
+                    carpeta: "licancel",
                 },
                 {
                     tema: "Plomo en Arica",
-                    carpeta: "arica"
+                    carpeta: "arica",
                 },
                 {
                     tema: "Proyecto hidroeléctrico Alto Maipo",
-                    carpeta: "alto-maipo"
+                    carpeta: "alto-maipo",
                 },
                 {
                     tema: "Proyecto inmobiliario Bosque El Panul",
-                    carpeta: "el-panul"
+                    carpeta: "el-panul",
                 },
                 {
                     tema: "Proyecto minero Pampa Hermosa",
-                    carpeta: "pampa-hermosa"
+                    carpeta: "pampa-hermosa",
                 },
                 {
                     tema: "Salmoneras en la Reserva Nacional Kawésqar",
-                    carpeta: "kawesqar"
+                    carpeta: "kawesqar",
                 },
                 {
                     tema: "Usurpación de agua en la Provincia de Petorca",
-                    carpeta: "petorca"
-                }
+                    carpeta: "petorca",
+                },
             ];
 
             const donde = document.querySelector("#otres");
