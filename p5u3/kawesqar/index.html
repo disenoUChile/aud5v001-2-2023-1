@@ -52,12 +52,11 @@
             <header class="row mt-3">
                 <div class="col-11 col-sm-10 mx-auto">
                     <div class="text-center">
-                        <img class="w-25 mx-auto my-5" src="img/1_picto.jpg" />
-                        <h2 class="fs-5 text-body-secondary">Comprender, desafiar y transformar</h2>
+                        <img class="w-25 mx-auto my-4" src="img/grafica-inicio.png" />
+                        <h2 class="fs-5"><a href="https://disenouchile.github.io/aud5v001-2-2023-1/p5u3/" class="link-secondary link-underline-opacity-10 link-underline-opacity-50-hover">Comprender, desafiar y transformar</a></h2>
                         <h1>Salmoneras en la Reserva Nacional Kawésqar</h1>
                         <address class="mb-5">
-                            <p>
-                                <span class="fw-bold">Consuelo Bahamondes, Daniela Quijada y Dariel Rojas</span><br />
+                            <p class="fw-bold">Consuelo Bahamondes, Daniela Quijada y Dariel Rojas<br />
                                 <span class="small text-body-secondary">PUBLICADO EL 29 DE JUNIO DE 2023</span>
                             </p>
                         </address>
@@ -365,55 +364,63 @@
             </div>
         </footer>
         <script>
-            const datos = [
-                {
-                    tema: "Basural de ropa en el Desierto de Atacama",
-                    carpeta: "atacama"
-                },
-                {
-                    tema: "Mujeres y agua en San Pedro de Melipilla",
-                    carpeta: "melipilla"
-                },
-                {
-                    tema: "Parque eólico en Chiloé",
-                    carpeta: "chiloe"
-                },
-                {
-                    tema: "Planta de celulosa Licancel",
-                    carpeta: "licancel"
-                },
-                {
-                    tema: "Plomo en Arica",
-                    carpeta: "arica"
-                },
-                {
-                    tema: "Proyecto hidroeléctrico Alto Maipo",
-                    carpeta: "alto-maipo"
-                },
-                {
-                    tema: "Proyecto inmobiliario Bosque El Panul",
-                    carpeta: "el-panul"
-                },
-                {
-                    tema: "Proyecto minero Pampa Hermosa",
-                    carpeta: "pampa-hermosa"
-                },
-                {
-                    tema: "Usurpación de agua en la Provincia de Petorca",
-                    carpeta: "petorca"
-                }
-            ];
+const datos = [
+    {
+        tema: "Salmoneras en la Reserva Nacional Kawésqar",
+        carpeta: "kawesqar",
+    },
+    {
+        tema: "Basural de ropa en el Desierto de Atacama",
+        carpeta: "atacama",
+    },
+    {
+        tema: "Mujeres y agua en San Pedro de Melipilla",
+        carpeta: "melipilla",
+    },
+    {
+        tema: "Parque eólico en Chiloé",
+        carpeta: "chiloe",
+    },
+    {
+        tema: "Planta de celulosa Licancel",
+        carpeta: "licancel",
+    },
+    {
+        tema: "Plomo en Arica",
+        carpeta: "arica",
+    },
+    {
+        tema: "Proyecto hidroeléctrico Alto Maipo",
+        carpeta: "alto-maipo",
+    },
+    {
+        tema: "Proyecto inmobiliario Bosque El Panul",
+        carpeta: "el-panul",
+    },
+    {
+        tema: "Proyecto minero Pampa Hermosa",
+        carpeta: "pampa-hermosa",
+    },
+    {
+        tema: "Usurpación de agua en la Provincia de Petorca",
+        carpeta: "petorca",
+    }
+];
 
-            const donde = document.querySelector("#otres");
+const donde = document.querySelector("#otres");
 
-            datos.forEach((d) => {
-                donde.innerHTML +=
-                    '<div class="col"><div class="card h-100"><div class="card-body"><p class="m-0"><a href="https://disenouchile.github.io/aud5v001-2-2023-1/p5u3/' +
-                    d.carpeta +
-                    '" class="stretched-link">' +
-                    d.tema +
-                    "</a></p></div></div></div>";
-            });
+datos.forEach((d, i) => {
+    if (i == 0) {
+        donde.innerHTML += '<div class="col"><div class="card h-100"><div class="card-body"><p class="m-0 text-body-tertiary">' + d.tema + "</p></div></div></div>";
+    } else {
+        donde.innerHTML +=
+            '<div class="col"><div class="card h-100"><div class="card-body"><p class="m-0"><a href="https://disenouchile.github.io/aud5v001-2-2023-1/p5u3/' +
+            d.carpeta +
+            '" class="stretched-link link-secondary link-underline-opacity-25 link-underline-opacity-100-hover">' +
+            d.tema +
+            "</a></p></div></div></div>";
+    }
+});
         </script>
     </body>
 </html>
