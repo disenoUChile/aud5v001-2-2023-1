@@ -74,55 +74,59 @@
             </div>
         </footer>
         <script>
-            const datos = [
-                {
-                    tema: "Basural de ropa en el Desierto de Atacama",
-                    carpeta: "atacama"
-                },
-                {
-                    tema: "Mujeres y agua en San Pedro de Melipilla",
-                    carpeta: "melipilla"
-                },
-                {
-                    tema: "Parque eólico en Chiloé",
-                    carpeta: "chiloe"
-                },
-                {
-                    tema: "Planta de celulosa Licancel",
-                    carpeta: "licancel"
-                },
-                {
-                    tema: "Plomo en Arica",
-                    carpeta: "arica"
-                },
-                {
-                    tema: "Proyecto hidroeléctrico Alto Maipo",
-                    carpeta: "alto-maipo"
-                },
-                {
-                    tema: "Proyecto inmobiliario Bosque El Panul",
-                    carpeta: "el-panul"
-                },
-                {
-                    tema: "Proyecto minero Pampa Hermosa",
-                    carpeta: "pampa-hermosa"
-                },
-                {
-                    tema: "Salmoneras en la Reserva Nacional Kawésqar",
-                    carpeta: "kawesqar"
-                },
-                {
-                    tema: "Usurpación de agua en la Provincia de Petorca",
-                    carpeta: "petorca"
-                }
-            ];
+const datos = [
+    {
+        tema: "Basural de ropa en el Desierto de Atacama",
+        carpeta: "atacama",
+    },
+    {
+        tema: "Mujeres y agua en San Pedro de Melipilla",
+        carpeta: "melipilla",
+    },
+    {
+        tema: "Parque eólico en Chiloé",
+        carpeta: "chiloe",
+    },
+    {
+        tema: "Planta de celulosa Licancel",
+        carpeta: "licancel",
+    },
+    {
+        tema: "Plomo en Arica",
+        carpeta: "arica",
+    },
+    {
+        tema: "Proyecto hidroeléctrico Alto Maipo",
+        carpeta: "alto-maipo",
+    },
+    {
+        tema: "Proyecto inmobiliario Bosque El Panul",
+        carpeta: "el-panul",
+    },
+    {
+        tema: "Proyecto minero Pampa Hermosa",
+        carpeta: "pampa-hermosa",
+    },
+    {
+        tema: "Salmoneras en la Reserva Nacional Kawésqar",
+        carpeta: "kawesqar",
+    },
+    {
+        tema: "Usurpación de agua en la Provincia de Petorca",
+        carpeta: "petorca",
+    }
+];
 
-            const donde = document.querySelector("#otres");
+const donde = document.querySelector("#otres");
 
-            datos.forEach((d) => {
-                donde.innerHTML +=
-                    '<div class="col"><div class="card h-100"><div class="card-body"><p class="m-0"><a href="https://disenouchile.github.io/aud5v001-2-2023-1/p5u3/' + d.carpeta + '" class="stretched-link">' + d.tema + '</a></p></div></div></div>';
-            });
+datos.forEach((d, i) => {
+        donde.innerHTML +=
+            '<div class="col"><div class="card h-100"><div class="card-body"><p class="m-0"><a href="https://disenouchile.github.io/aud5v001-2-2023-1/p5u3/' +
+            d.carpeta +
+            '" class="stretched-link link-secondary link-underline-opacity-25 link-underline-opacity-100-hover">' +
+            d.tema +
+            "</a></p></div></div></div>";
+});
         </script>
     </body>
 </html>
