@@ -15,3 +15,7 @@
 **Primer Proyecto de Unidad 3**
 
 → [https://disenouchile.github.io/aud5v001-2-2023-1/p5u3](https://disenouchile.github.io/aud5v001-2-2023-1/p5u3)
+
+**Segundo Proyecto de Unidad 3**
+
+→ [https://disenouchile.github.io/aud5v001-2-2023-1/final](https://disenouchile.github.io/aud5v001-2-2023-1/final)
