@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Proyecto hidroeléctrica Alto Maipo</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+        <style>
+            @media (min-width: 768px) {
+                .container {
+                    max-width: 720px;
+                }
+            }
+
+            aside,
+            footer {
+                font-size: 90%;
+            }
+
+            dl dd {
+                padding-left: 1rem;
+                text-indent: -1rem;
+            }
+            em {
+                font-style: normal;
+                font-weight: bold;
+            }
+
+            figcaption p {
+                font-size: 80%;
+                color: gray;
+                text-align: center;
+            }
+            /* la línea de tiempo */
+            #timeline {
+                height: 50vh;
+                width: 100%;
+                overflow-y: hidden;
+                overflow-x: scroll;
+            }
+            #timeline::-webkit-scrollbar {
+                height: 0.5rem;
+            }
+
+            #timeline::-webkit-scrollbar-track {
+                background: #eee;
+            }
+
+            #timeline::-webkit-scrollbar-thumb {
+                background: #ddd;
+            }
+
+            #timeline::-webkit-scrollbar-thumb:hover {
+                background: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="licencia" viewBox="0 0 16 16" fill="currentColor">
+                <path
+                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM5.408 5.89c-.83 0-1.318.64-1.318 1.753v.742c0 1.108.479 1.727 1.318 1.727.69 0 1.138-.435 1.187-1.05h1.147v.114c-.058 1.147-1.029 1.938-2.343 1.938-1.612 0-2.518-1.028-2.518-2.729v-.747c0-1.7.914-2.75 2.518-2.75 1.319 0 2.29.812 2.343 1.999v.11H6.595c-.049-.638-.506-1.108-1.187-1.108Zm5.404 0c-.831 0-1.319.64-1.319 1.753v.742c0 1.108.48 1.727 1.319 1.727.69 0 1.138-.435 1.186-1.05h1.147v.114c-.057 1.147-1.028 1.938-2.342 1.938-1.613 0-2.518-1.028-2.518-2.729v-.747c0-1.7.914-2.75 2.518-2.75 1.318 0 2.29.812 2.342 1.999v.11h-1.147c-.048-.638-.505-1.108-1.186-1.108Z"
+                />
+            </symbol>
+        </svg>
+        <nav class="pt-3 shadow-sm">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <p class="d-flex justify-content-around small fw-bold">
+                            <a href="https://uchile.cl/" target="_blank" rel="noopener noreferrer" class="link-dark link-opacity-25 link-opacity-50-hover text-decoration-none">Universidad de Chile</a>
+                            <a href="https://fau.uchile.cl/carreras/4929/diseno" target="_blank" rel="noopener noreferrer" class="link-dark link-opacity-25 link-opacity-50-hover text-decoration-none">Diseño en Visualidad y Medios</a>
+                            <a href="https://github.com/disenouchile/aud5v001-2-2023-1/" target="_blank" rel="noopener noreferrer" class="link-dark link-opacity-25 link-opacity-50-hover text-decoration-none">Proyecto V</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <header class="container">
+            <div class="row mt-3">
+                <div class="col-11 col-sm-10 mx-auto">
+                    <div class="text-center">
+                        <img class="w-25 mx-auto my-4" src="img/grafica-00-cabecera.png" />
+                        <h2 class="fs-5"><a href="https://disenouchile.github.io/aud5v001-2-2023-1/final/" class="link-secondary link-underline-opacity-10 link-underline-opacity-50-hover">Comprender, desafiar y transformar</a></h2>
+                        <h1>Proyecto Hidroeléctrica Alto Maipo</h1>
+                        <address class="mb-5">
+                            <p class="fw-bold">
+                                Por Sofía Guzmán, Anibal Lobos, Valentina Villagrán y Catalina Yapur<br />
+                                <span class="small text-body-secondary">PUBLICADO EL 6 DE JULIO DE 2023</span>
+                            </p>
+                        </address>
+                    </div>
+                    <p class="lead">
+                        El proyecto Hidroeléctrico Alto Maipo se conforma por dos centrales hidroeléctricas: Alfalfal II y Las Lajas, las cuales utilizan para su funcionamiento las aguas de los ríos Colorado y Maipo. Los cauces de tales
+                        ríos son los que alimentan el agua potable de la mayor parte de la Región Metropolitana.
+                    </p>
+                </div>
+            </div>
+        </header>
+        <main>
+            <article>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <h3 class="fs-4 text-center mt-5 mb-3">La matriz eléctrica chilena</h3>
+
+                            <p><em>Las 68 plantas hidroeléctricas en funcionamiento en el país ofrecen un aporte equivalente al 5% de la matriz energética primaria de Chile</em>.</p>
+
+                            <p>En términos de aporte de la matriz energética primaria, la energía de fuente hídrica sólo supera al aporte combinado de la energías de fuente solar, eólica, geotérmica y biogás.</p>
+                        </div>
+
+                        <figure class="col-12">
+                            <object data="img/grafica-01-aporte-energia.svg" type="image/svg+xml" class="w-100"></object>
+
+                            <figcaption>
+                                <p>
+                                    Distribución de la matriz energética en Chile. Fuente:
+                                    <a href="https://obtienearchivo.bcn.cl/obtienearchivo?id=repositorio/10221/32492/1/BCN_Matriz_energetica_electrica_en_Chile.pdf" class="link-secondary" target="_blank">
+                                        Asesoría técnica parlamentaria, 2021
+                                    </a>
+                                </p>
+                            </figcaption>
+                        </figure>
+
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <p>
+                                <em>Cuando el aporte de las 68 plantas se pone en relación a la matriz eléctrica</em>, que es una parte de la matriz energética, <em>su aporte se estima en el 24%</em>. Y cuando se consideran exclusivamente
+                                las fuentes renovables que aportan a la matriz eléctrica chilena, su aporte se acerca al 45%
+                            </p>
+                        </div>
+
+                        <figure class="col-12">
+                            <object data="img/grafica-02-aporte-electricidad.svg" type="image/svg+xml" class="w-100"></object>
+
+                            <figcaption>
+                                <p>
+                                    Distribución de la matriz eléctrica en Chile. Fuente:
+                                    <a href="https://obtienearchivo.bcn.cl/obtienearchivo?id=repositorio/10221/32492/1/BCN_Matriz_energetica_electrica_en_Chile.pdf" class="link-secondary" target="_blank">
+                                        Asesoría técnica parlamentaria, 2021
+                                    </a>
+                                </p>
+                            </figcaption>
+                        </figure>
+
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <h4 class="fs-5 text-center mt-4 mb-3">Tipos de plantas hidroeléctricas</h4>
+
+                            <p>Una planta hidroeléctrica transforma la energía hidráulica de un curso hídrico, sea natural o artificial, en energía eléctrica renovable.</p>
+
+                            <p><em>Se pueden diferenciar tres tipo de plantas hidroeléctricas</em>, según sean hidroléctricas de embalse, de almacenamiento y de pasada.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="row mx-md-5 my-2 g-5">
+                        <figure class="col-md-4">
+                            <object data="img/grafica-03-tipo-de-planta-1.svg" type="image/svg+xml" class="w-100"></object>
+                            <figcaption>
+                                <p>Hidroeléctrica de embalse</p>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="col-md-4">
+                            <object data="img/grafica-03-tipo-de-planta-2.svg" type="image/svg+xml" class="w-100"></object>
+                            <figcaption>
+                                <p>Hidroeléctrica de almacenamiento</p>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="col-md-4">
+                            <object data="img/grafica-03-tipo-de-planta-3.svg" type="image/svg+xml" class="w-100"></object>
+                            <figcaption>
+                                <p>Hidroeléctrica de pasada</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <p>En la <em>hidroeléctrica de embalse</em> el agua del caudal se almacena en un embalse artificial creado por una presa. El agua se libera para producir electricidad según el requerimiento del sistema.</p>
+
+                            <p>
+                                En la <em>hidroeléctrica de almacenamiento</em> el agua se almacena en dos embalses a distinta altura. En momentos de mayor demanda energética se realiza el proceso río abajo, dejando caer el agua. Cuando la
+                                demanda energética es menor se realiza un bombeo y el agua es dirigida río arriba.
+                            </p>
+
+                            <p>
+                                En la <em>hidroeléctrica de pasada</em> se desvía un porcentaje del caudal de un río a través de una bocatoma. El agua se transporta a través de una tubería y se deja caer por una pendiente hasta una turbina,
+                                el agua es devuelta a su cauce.
+                            </p>
+
+                            <!--Ya de dijo que eran 68, lo que aquí corresponde decir es cómo se dividen esas 68 y/o dónde se concentran-->
+
+                            <p>
+                                Hasta el año 2023, en Chile se han construido <em>?? plantas hidroeléctricas de embalse</em>, <em>?? centrales hidroeléctricas de almacenamiento</em> y <em>?? centrales hidroeléctricas de pasada</em>. Su
+                                contrucción se concentra en la zona ??? del país.
+                            </p>
+                        </div>
+
+                        <figure class="col-12">
+                            <object data="img/grafica-04-plantas-chile.svg" type="image/svg+xml" class="w-100 my-2"></object>
+
+                            <figcaption>
+                                <p>Gráfica figurativa (mapa de Chile, con plantas marcadas, diferenciando su tipo)</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <h3 class="fs-4 text-center mt-5 mb-3">El proyecto Hidroeléctrico Alto Maipo</h3>
+                            <p>Alto Maipo consiste en dos plantas hidroeléctricas de pasada construidas en la comuna de San José de Maipo, Provincia Cordillera de la Región Metropolitana de Santiago de Chile.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Lo que sigue debe ser un plano, no una fotografía, la lógica es que quede como una especie de "zoom" al gráfico previo-->
+
+                <div class="container-fluid g-0">
+                    <figure>
+                        <object data="img/grafica-05-mapa-alto-maipo.svg" type="image/svg+xml" class="w-100"></object>
+                        <figcaption>
+                            <p>Mapa de detalle de la zona</p>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <p>El nombre de las dos plantas hidroeléctricas del proyecto son <em>Alfalfal II</em> y <em>Las Lajas</em>. Estas plantas usan, respectivamente, las aguas del <em>río Colorado</em> y el <em>río Maipo</em>.</p>
+                            <p>En conjunto, las <em>dos centrales aportarían 531 MW al Sistema Eléctrico Nacional (SEN)</em>, que tiene una cobertura del 98,5% de la población nacional y una potencia total de 28.495 MW.</p>
+                            <p>Comprometiendo tal aporte, que no alcanza el 2% de la potencia total del SEN, el proyecto se presenta a su primer estudio de impacto ambiental en el año 2007.</p>
+                            <figure>
+                                <object data="img/grafica-06-linea-de-tiempo.svg" type="image/svg+xml" class="w-100 my-2"></object>
+                                <figcaption>
+                                    <p>Gráfica No figurativa (Cronología)</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <h3 class="fs-4 text-center mt-5 mb-3">El Conflicto socioambiental de Alto Maipo</h3>
+
+                            <p>Las dos plantas de hidroeléctrica de pasada de Alto Maipo toman las aguas de los ríos Colorado y Maipo:</p>
+
+                            <ul>
+                                <li>El río Colorado es intervenido por la planta Alfalfal II, antes de que su cauce se convierta en afluente del río Maipo.</li>
+                                <li>El río Maipo es intervenido por la planta Las Lajas, después de haber recibido el aporte del río Colorado.</li>
+                            </ul>
+
+                            <p>
+                                Después de las dos centrales de pasada del proyecto Alto Maipo, las aguas, que por tales cauces bajan de la cordillera, se convierten en la principal fuente hídrica de la Región Metropolitana de Santiago de
+                                Chile:
+                            </p>
+                            <ul>
+                                <li>abasteciendo al 70% de la Región con agua potable; y</li>
+
+                                <li>concentrando cerca de un 90% de las demandas de regadío.</li>
+                            </ul>
+
+                            <figure>
+                                <object data="img/grafica-07-mapa-rios.svg" type="image/svg+xml" class="w-100 my-2"></object>
+
+                                <figcaption>
+                                    <p>Gráfica figurativa (mapa de la zona cordillerana que muestre "antes y después" de las centrales de pasada, con plantas marcadas)</p>
+                                </figcaption>
+                            </figure>
+
+                            <h4 class="fs-5 text-center mt-5 mb-2">El río Maipo intervenido</h4>
+
+                            <p>
+                                En las construcciones de las dos centrales de pasada del proyecto Alto Maipo, se intervino el suelo y la vegetación en torno a los cauces milenarios de los ríos, que ha sido aprovechado por siglos por los
+                                santiaguinos.
+                            </p>
+
+                            <p>
+                                <em>Tal intervención ha tenido un efecto directo en la turbiedad de las aguas que llegan a la planta de Las Vizcacha, que es una de las principales productoras de agua potable de la Region Metropolitana</em>.
+                                Y por tal turbiedad y la necesidad de asegurar el suministro de agua potable en la región más habitada del país, fue necesaria una nueva intervención del cauce.
+                            </p>
+                        </div>
+
+                        <figure class="col-12">
+                            <object data="img/grafica-08-pendiente.svg" type="image/svg+xml" class="w-100 my-2"></object>
+
+                            <figcaption>
+                                <p>Gráfica mixta (realizar su propiar versiónd de la gráfica de arriba, después de investigar sobre el asunto)</p>
+                            </figcaption>
+                        </figure>
+
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <h4 class="fs-5 text-center mt-5 mb-2">Los vecinos de el Alfalfal II y Las Lajas</h4>
+
+                            <p>
+                                Los vecinos del Cajón del Maipo al informarse comienzan una organización para abordar el Estudio Del Impacto Ambiental de Alto Maipo. Al tener limitaciones en la participación efectiva del proyecto como
+                                comunidad, buscaron otras entidades que los apoyaran en contra de la destrucción de territorio y áreas verdes del sector.
+                            </p>
+
+                            <p>
+                                A su vez, la Coordinadora Ríos del Maipo, más conocida como “No Alto Maipo”, llevó acciones legales contra Alto Maipo por la existencia de un “convenio secreto” entre AES Gener y Aguas Andinas, una denegación
+                                de los expedientes y denuncias por obras. También han organizado diversas formas de protesta, tanto a nivel comunal como regional, argumentando que:
+                            </p>
+
+                            <div class="row my-2 align-items-center">
+                                <div class="col-sm-5"><img src="img/grafica-09-detalle-1.jpg" class="w-100" /></div>
+                                <div class="col-sm-7"><p>No es propiamente una central de pasada, es una megarepresa subterránea que interfiere todo el sistema hídrico de la cuenca.</p></div>
+                            </div>
+
+                            <div class="row my-2 align-items-center">
+                                <div class="col-sm-5 order-sm-2"><img src="img/grafica-09-detalle-1.jpg" class="w-100" /></div>
+                                <div class="col-sm-7 order-sm-1"><p>El 84% de la energía producida irá íntegramente a la Minera Los Pelambres de Antofagasta Minerals en el norte del país.</p></div>
+                            </div>
+
+                            <div class="row my-2 align-items-center">
+                                <div class="col-sm-5"><img src="img/grafica-09-detalle-1.jpg" class="w-100" /></div>
+                                <div class="col-sm-7"><p>Escasa participación de parte de la superintendencia para defender los derechos de las personas que viven en El Cajón del Maipo.</p></div>
+                            </div>
+
+                            <div class="row my-2 align-items-center">
+                                <div class="col-sm-5 order-sm-2"><img src="img/grafica-09-detalle-1.jpg" class="w-100" /></div>
+                                <div class="col-sm-7 order-sm-1"><p>Los caudales ecológicos considerados no son suficientes para mantener los ecosistemas locales de El Cajón del Maipo.</p></div>
+                            </div>
+
+                            <div class="row my-2 align-items-center">
+                                <div class="col-sm-5"><img src="img/grafica-09-detalle-1.jpg" class="w-100" /></div>
+                                <div class="col-sm-7"><p>Los caudales ecológicos considerados no son suficientes para mantener los ecosistemas locales de El Cajón del Maipo</p></div>
+                            </div>
+
+                            <div class="row my-2 align-items-center">
+                                <div class="col-sm-5 order-sm-2"><img src="img/grafica-09-detalle-1.jpg" class="w-100" /></div>
+                                <div class="col-sm-7 order-sm-1"><p>Contaminación de las aguas superficiales y subterráneas con altos niveles de metales pesados.</p></div>
+                            </div>
+
+                            <div class="row my-2 align-items-center">
+                                <div class="col-sm-5"><img src="img/grafica-09-detalle-1.jpg" class="w-100" /></div>
+                                <div class="col-sm-7">
+                                    <p>
+                                        Los caudales remanentes en el tramo intervenido del río Maipo son insuficientes para continuar con regularidad actividades como el rafting o el kayak, mermando así la actividad de operadores
+                                        turísticos.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="row my-2 align-items-center">
+                                <div class="col-sm-5 order-sm-2"><img src="img/grafica-09-detalle-1.jpg" class="w-100" /></div>
+                                <div class="col-sm-7 order-sm-1"><p>Desertificación del Cajón del Maipo.</p></div>
+                            </div>
+                        </div>
+
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <h4 class="fs-5 text-center mt-5 mb-2">Situación hasta la actualidad</h4>
+
+                            <figure>
+                                <object data="img/grafica-10-linea-de-tiempo.svg" type="image/svg+xml" class="w-100 my-2"></object>
+                            </figure>
+
+                            <p>Como impulsor y encargado del proyecto se encuentra AES Gener , la segunda empresa generadora de energía eléctrica más importante de Chile.</p>
+
+                            <p>
+                                Es financiada con accionistas del Banco de Chile, Celfin Capital S.A., además de diversos fondos de pensiones (como Provida, Capital, Hábitat y Cuprum). Cuenta con diferentes filiales en toda latinoamérica,
+                                sin embargo su vínculo más importante es con AES Corp, empresa estadounidense más importante a nivel mundial en temas de energía.
+                            </p>
+
+                            <p>
+                                A pesar de ser aprobados los proyectos de esta corporación, una comisión investigadora de la Cámara de Diputados concluyó por unanimidad que Alto Maipo fue aprobado con múltiples irregularidades, agregando
+                                corrupción y tráfico de influencias de personas del gobierno.
+                            </p>
+
+                            <p>En el año 2021 Alto Maipo se acogió al capítulo 11 de la Ley de Quiebras en Estados Unidos, debiendo actualmente más de $1.500 millones de dólares.</p>
+                            <p>Luego a finales del año 2022 se detectó un desprendimiento de túnel en la central Las Lajas, lo que ocaciono la detención del funcionamiento de esta y de Alfalfal II</p>
+                            <p>Actualmente el proyecto se encuentra sin funcionamiento, teniendo como fecha estimada para la solución del accidente el 30 de junio de 2023. No obstante, el retorno al servicio deberá esperar hasta 2024.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <aside class="container">
+            <div class="row mb-5">
+                <dl class="col-11 col-sm-10 mx-auto mt-5">
+                    <dt class="mb-2">Fuentes</dt>
+
+                    <dd>
+                        Decreto 73 de 2012 [Ministerio de energía] Otorga a AES GENER S.A concesión definitiva para establecer el “Proyecto Hidroeléctrico Alto Maipo” en la región Metropolitana, provincia Cordillera comuna San José de
+                        Maipo.
+                    </dd>
+                    <dd>
+                        Delgado, L y Marín, V. (2013). El servicio ecosistémico de información del sector Alto Maipo cuenca del rio Maipo: análisis de los posibles efectos del proyecto hidroeléctrico Alto Maipo [Tesis Postgrado, Universidad
+                        de Chile] Repositorio académico de la Universidad de Chile.
+                    </dd>
+                    <dd>Folchi, M y Godoy, F. (2016). La disputa de significados en torno al Proyecto Hidroeléctrico Alto Maipo. Historia Ambiental Latinoamericana Y Caribeña (HALAC) Revista De La Solcha, 6(1), 86–104.</dd>
+                    <dd>
+                        Godoy, F y Folchi, M. (2014). Conocimiento y medioamiente. Aproximación social del conocimiento científico en conflictos socioambientales el caso Alto Maipo. [Tesis Postgrado, Universidad de Chile] Repositorio
+                        académico de la Universidad de Chile.
+                    </dd>
+                    <dd>Leblanc, N. (2021, 28 de Enero). Proyecto Alto Maipo: Cronología de 13 años de destrucción ambiental. Glaciares Chile.</dd>
+
+                    <dd>
+                        Vega, F. (13 de noviembre de 2021). Hecho en China, desechado en Chile: La ruta de la ropa usada que termina en el desierto de Atacama. DFMAS.
+                        https://dfmas.df.cl/df-mas/hablemos-de/la-ruta-de-la-ropa-usada-que-termina-como-basura-en-el-desierto
+                    </dd>
+                </dl>
+
+                <dl class="col-11 col-sm-10 mx-auto mt-2 mb-5">
+                    <dt class="mb-2">Editado por</dt>
+                    <dd>Josefa Birkelbach, Felipe Cortez y Luciana Oropesa</dd>
+                </dl>
+            </div>
+        </aside>
+
+        <footer class="bg-light border-top">
+            <div class="container-fluid pt-4 pb-5">
+                <div class="row">
+                    <div class="col-sm-11 mx-auto">
+                        <h4 class="fs-6 my-4 ps-3 text-center">Más de Proyecto V</h4>
+
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4 small" id="otres"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid border-top py-4">
+                <div class="row">
+                    <div class="col-sm-11 mx-auto">
+                        <p class="px-3 d-flex justify-content-between align-items-center">
+                            <span>Primer Semestre, 2023</span>
+                            <span>
+                                <svg class="me-2" width="1em" height="1em"><use href="#licencia"></use></svg>
+                                <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" class="link-dark">Atribución-NoComercial-CompartirIgual 4.0 Internacional</a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            const datos = [
+                {
+                    tema: "Proyecto hidroeléctrico Alto Maipo",
+                    carpeta: "alto-maipo",
+                },
+                {
+                    tema: "Basural de ropa en el Desierto de Atacama",
+                    carpeta: "atacama",
+                },
+                {
+                    tema: "Mujeres y agua en San Pedro de Melipilla",
+                    carpeta: "melipilla",
+                },
+                {
+                    tema: "Parque eólico en Chiloé",
+                    carpeta: "chiloe",
+                },
+                {
+                    tema: "Planta de celulosa Licancel",
+                    carpeta: "licancel",
+                },
+                {
+                    tema: "Plomo en Arica",
+                    carpeta: "arica",
+                },
+                {
+                    tema: "Proyecto inmobiliario Bosque El Panul",
+                    carpeta: "el-panul",
+                },
+                {
+                    tema: "Proyecto minero Pampa Hermosa",
+                    carpeta: "pampa-hermosa",
+                },
+                {
+                    tema: "Salmoneras en la Reserva Nacional Kawésqar",
+                    carpeta: "kawesqar",
+                },
+                {
+                    tema: "Usurpación de agua en la Provincia de Petorca",
+                    carpeta: "petorca",
+                },
+            ];
+
+            const donde = document.querySelector("#otres");
+
+            datos.forEach((d, i) => {
+                if (i == 0) {
+                    donde.innerHTML += '<div class="col"><div class="card h-100"><div class="card-body"><p class="m-0 text-body-tertiary">' + d.tema + "</p></div></div></div>";
+                } else {
+                    donde.innerHTML += '<div class="col"><div class="card h-100"><div class="card-body"><p class="m-0"><a href="https://disenouchile.github.io/aud5v001-2-2023-1/final/' + d.carpeta + '" class="stretched-link link-secondary link-underline-opacity-25 link-underline-opacity-100-hover">' + d.tema + '</a></p></div></div></div>';
+                }
+            });
+        </script>
+    </body>
+</html>

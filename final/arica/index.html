@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Plomo en Arica</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+        <style>
+            @media (min-width: 768px) {
+                .container {
+                    max-width: 720px;
+                }
+            }
+
+            aside,
+            footer {
+                font-size: 90%;
+            }
+
+            dl dd {
+                padding-left: 1rem;
+                text-indent: -1rem;
+            }
+            em {
+                font-style: normal;
+                font-weight: bold;
+            }
+
+            figcaption p {
+                font-size: 80%;
+                color: gray;
+                text-align: center;
+            }
+            /* la línea de tiempo */
+            #timeline {
+                height: 50vh;
+                width: 100%;
+                overflow-y: hidden;
+                overflow-x: scroll;
+            }
+            #timeline::-webkit-scrollbar {
+                height: 0.5rem;
+            }
+
+            #timeline::-webkit-scrollbar-track {
+                background: #eee;
+            }
+
+            #timeline::-webkit-scrollbar-thumb {
+                background: #ddd;
+            }
+
+            #timeline::-webkit-scrollbar-thumb:hover {
+                background: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="licencia" viewBox="0 0 16 16" fill="currentColor">
+                <path
+                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM5.408 5.89c-.83 0-1.318.64-1.318 1.753v.742c0 1.108.479 1.727 1.318 1.727.69 0 1.138-.435 1.187-1.05h1.147v.114c-.058 1.147-1.029 1.938-2.343 1.938-1.612 0-2.518-1.028-2.518-2.729v-.747c0-1.7.914-2.75 2.518-2.75 1.319 0 2.29.812 2.343 1.999v.11H6.595c-.049-.638-.506-1.108-1.187-1.108Zm5.404 0c-.831 0-1.319.64-1.319 1.753v.742c0 1.108.48 1.727 1.319 1.727.69 0 1.138-.435 1.186-1.05h1.147v.114c-.057 1.147-1.028 1.938-2.342 1.938-1.613 0-2.518-1.028-2.518-2.729v-.747c0-1.7.914-2.75 2.518-2.75 1.318 0 2.29.812 2.342 1.999v.11h-1.147c-.048-.638-.505-1.108-1.186-1.108Z"
+                />
+            </symbol>
+        </svg>
+        <nav class="pt-3 shadow-sm">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <p class="d-flex justify-content-around small fw-bold">
+                            <a href="https://uchile.cl/" target="_blank" rel="noopener noreferrer" class="link-dark link-opacity-25 link-opacity-50-hover text-decoration-none">Universidad de Chile</a>
+                            <a href="https://fau.uchile.cl/carreras/4929/diseno" target="_blank" rel="noopener noreferrer" class="link-dark link-opacity-25 link-opacity-50-hover text-decoration-none">Diseño en Visualidad y Medios</a>
+                            <a href="https://github.com/disenouchile/aud5v001-2-2023-1/" target="_blank" rel="noopener noreferrer" class="link-dark link-opacity-25 link-opacity-50-hover text-decoration-none">Proyecto V</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <header class="container">
+            <div class="row mt-3">
+                <div class="col-11 col-sm-10 mx-auto">
+                    <div class="text-center">
+                        <img class="w-25 mx-auto my-4" src="img/grafica-00-cabecera.png" />
+                        <h2 class="fs-5"><a href="https://disenouchile.github.io/aud5v001-2-2023-1/final/" class="link-secondary link-underline-opacity-10 link-underline-opacity-50-hover">Comprender, desafiar y transformar</a></h2>
+                        <h1>Plomo en Arica</h1>
+                        <address class="mb-5">
+                            <p class="fw-bold">
+                                Por Lucía Barnier, Angela Pizarro y Martina Flores<br />
+                                <span class="small text-body-secondary">PUBLICADO EL 6 DE JULIO DE 2023</span>
+                            </p>
+                        </address>
+                    </div>
+                    <p class="lead">
+                        Entre 1984 y 1985, la compañía chilena Promel Ltda. recibió en Arica cerca de 20.000 toneladas de residuos de la empresa sueca Boiden Mineal AB. Los residuos fueron depositados cerca del Cerro Chuño. Años más tarde, cuando el crecimiento de la ciudad ya había alcanzado ese cerro, se descubrió que tales desecho eran altamente tóxicos.
+                    </p>
+                </div>
+            </div>
+        </header>
+        <main>
+            <article>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <p>
+                                En un documento fechado el 21 de marzo de 1984, en Dictadura Cívico-Militar, MARCOS BEOVIC VRANICIC, en representación legal del Promel, le solicita al SR. DIRECTOR DEL SERVICIO NACIONAL DE SALUD la autorización para desembarcar apenas 48 kilos barros con contenido metálico que "no es tóxico, no se puede ingerir y cualquier persona puede manipularlo".
+                            </p>
+                            <figure>
+                                <img src="https://lavozdelosquesobran.cl/wp-content/uploads/2021/05/Documento-desembarco-firmado-por-Marcus-Beovic-691x1024.jpg" class="w-100 my-2" />
+                                <figcaption>
+                                    <p>Gráfica no figurativa</p>
+                                </figcaption>
+                            </figure>
+                            <p>
+                                Pero fueron muchos más de 48 kilos. Fueron 20 mil las toneladas de desechos que la sueca Boliden trasladó en 14 envíos a nuestro país. Desechos que sí eran tóxicos, debido a altas concentraciones de arsénico, mercurio, cadmio y plomo.
+                            </p>
+                            <figure>
+                                <object data="img/grafica-landscape.svg" type="image/svg+xml" class="w-100 my-2"></object>
+                                <figcaption>
+                                    <p>Gráfica no figurativa</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <h3 class="fs-4 text-center my-2">Ubicación de los desechos tóxicos</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <figure>
+                        <object data="img/grafica-landscape.svg" type="image/svg+xml" class="w-100 my-2"></object>
+                        <figcaption>
+                            <p>Mapa de detalle de la zona</p>
+                        </figcaption>
+                    </figure>
+                </div>
+
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-sm-10 mx-auto">
+                            
+                            <p>El lugar donde se encuentran los residuos es, hoy en día, el patio trasero de la periferia de Arica, donde, tal como en todo el país, se levantas las viviendas sociales. Viviendas donde se convive con el cáncer, los abortos espontáneos y los defectos de nacimiento que se pueden vincular con la exposición a los desechos tóxicos.</p>
+                        </div>
+
+
+                            <figure class="col-sm-6">
+                                <object data="img/grafica-landscape.svg" type="image/svg+xml" class="w-100 my-2"></object>
+                                <figcaption>
+                                    <p>Gráfica figurativa: Foto de la foto que se ve en 2:06 de https://www.youtube.com/watch?v=mD8zEU8hFl0</p>
+                                </figcaption>
+                            </figure>
+                            
+                            <figure class="col-sm-6">
+                                <object data="img/grafica-landscape.svg" type="image/svg+xml" class="w-100 my-2"></object>
+                                <figcaption>
+                                    <p>Gráfica figurativa: https://lavozdelosquesobran.cl/wp-content/uploads/2021/05/Captura-persona-enferma.jpg</p>
+                                </figcaption>
+                            </figure>
+                            
+                            </div>
+                        </div>
+                    </article>
+
+  
+
+            <article>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <h3 class="fs-4 text-center my-2">Enfermedades y repercusiones a largo plazo</h3>
+
+
+                            <p>
+                                Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant dolorum an. Per facer affert ut. Mei iisque mentitum moderatius cu. Sit munere facilis accusam eu feus
+                            </p>
+
+                            <figure>
+                                <object data="img/grafica-landscape.svg" type="image/svg+xml" class="w-100 my-2"></object>
+                                <figcaption>
+                                    <p>Acá los efectos en el cuerpo. Convendría separar los efectos a las exposiciones a cada uno de los elementos mencionados más arriba, partiendo por el plomo.</p>
+                                </figcaption>
+                            </figure>
+
+                            <figure>
+                                <object data="img/grafica-landscape.svg" type="image/svg+xml" class="w-100 my-2"></object>
+                                <figcaption>
+                                    <p>Acá los efectos en el cuerpo. Convendría separar los efectos a las exposiciones a cada uno de los elementos mencionados más arriba, seguido de arsénico, mercurio o cadmio (lo que se haya dicho más arriba que era segundo en concentración.</p>
+                                </figcaption>
+                            </figure>
+
+
+                            <figure>
+                                <object data="img/grafica-landscape.svg" type="image/svg+xml" class="w-100 my-2"></object>
+                                <figcaption>
+                                    <p>Acá los efectos en el cuerpo. Convendría separar los efectos a las exposiciones a cada uno de los elementos mencionados más arriba, seguido de arsénico, mercurio o cadmio (lo que se haya dicho más arriba que era tercero en concentración.</p>
+                                </figcaption>
+                            </figure>
+
+
+                            <figure>
+                                <object data="img/grafica-landscape.svg" type="image/svg+xml" class="w-100 my-2"></object>
+                                <figcaption>
+                                    <p>Acá los efectos en el cuerpo. Convendría separar los efectos a las exposiciones a cada uno de los elementos mencionados más arriba, seguido de arsénico, mercurio o cadmio (lo que se haya dicho más arriba que era cuarto en concentración.</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+
+            <article>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <h3 class="fs-4 text-center my-2">
+                                Muertos por plomo, arsénico, mercurio y cadmio en Arica</h3>
+                                <p>Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant dolorum an. Per facer affert ut. Mei iisque mentitum moderatius cu. Sit munere facilis accusam eu feus</p>
+                            <figure>
+                                <object data="img/grafica-square.svg" type="image/svg+xml" class="w-100 my-2"></object>
+                                <figcaption>
+                                    <p>Podría haber una gráfica no figurativa con razones de defunciones en Arica. Podría ser que entre ellas se cuenten la enfermedades y repercusiones a largo plazo expuestas más arriba.</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+
+            <article>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <h3 class="fs-4 text-center my-2">La historia más reciente</h3>
+                                <p>Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant dolorum an. Per facer affert ut. Mei iisque mentitum moderatius cu. Sit munere facilis accusam eu feus</p>
+                            <figure>
+                                <object data="img/grafica-portrait.svg" type="image/svg+xml" class="w-100 my-2"></object>
+                                <figcaption>
+                                    <p>Gráfica de línea de tiempo en la que se presenten procesos judiciales (ej: distintas demandas), procesos legislativos (ej: ley de polimetales), y la publicación de reportajes en Chilevisión, El País y La Voz de los que sobran.</p>
+                                </figcaption>
+                            </figure>
+                            <p>Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant dolorum an. Per facer affert ut. Mei iisque mentitum moderatius cu. Sit munere facilis accusam eu feus</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+
+
+          </main>
+
+        <aside class="container">
+            <div class="row mb-5">
+                <dl class="col-11 col-sm-10 mx-auto mt-5">
+                    <dt class="mb-2">Fuentes</dt>
+
+                    <dd>BBC News Mundo. (2022, 12 febrero). Arica: el escándalo por los desechos tóxicos que enfermaron a una comunidad | Documental [Vídeo]. YouTube. https://www.youtube.com/watch?v=sQZPzT61tKY
+Indh. (s. f.). Conflictos mediosambientales INDH. https://mapaconflictos.indh.cl/#/conflicto/6
+</dd>
+                    <dd>World Health Organization: WHO. (2022). Intoxicación por plomo y salud. www.who.int. https://www.who.int/es/news-room/fact-sheets/detail/lead-poisoning-and-health
+
+</dd>
+                    <dd>Montenegro, S. (2015). Comentarios sobre jurisprudencia en materia de tribunales superiores de justicia: caso "contaminación por plomo en Arica". Revista De Derecho Ambiental, 3(3), Pág. 185–201. Recuperado a partir de https://revistaderechoambiental.uchile.cl/index.php/RDA/article/view/36507
+</dd>
+                    <dd>CEPS -Centro de Epidemiología y Políticas de Salud. UDD Chile. (2016, 25 agosto). Contacto, polimetales Arica [Vídeo]. YouTube. https://www.youtube.com/watch?v=uNGUzUwpQTo
+</dd>
+                    <dd>T13. (2021, 19 febrero). Cerro chuño de Arica: Vivir y morir en zona contaminada - #ReportajesT13 [Vídeo]. YouTube. https://www.youtube.com/watch?v=EJKARfsCmgw
+</dd>
+                    <dd>Universidad de los lagos. (2012). El conflicto por polimetales en Arica.: El conflicto por polimetales en Arica. Movilización social, desarticulación local e intervención centralizada. (De E. Arriagada O; Primera edición). Gonzalo Delamaza. Nuria Cunill Grau. Alfredo Joignant.
+</dd>
+                </dl>
+
+                <dl class="col-11 col-sm-10 mx-auto mt-2 mb-5">
+                    <dt class="mb-2">Editado por</dt>
+
+                    <dd>Josefa Birkelbach, Felipe Cortez y Luciana Oropesa</dd>
+                </dl>
+            </div>
+        </aside>
+
+        <footer class="bg-light border-top">
+            <div class="container-fluid pt-4 pb-5">
+                <div class="row">
+                    <div class="col-sm-11 mx-auto">
+                        <h4 class="fs-6 my-4 ps-3 text-center">Más de Proyecto V</h4>
+
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4 small" id="otres"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid border-top py-4">
+                <div class="row">
+                    <div class="col-sm-11 mx-auto">
+                        <p class="px-3 d-flex justify-content-between align-items-center">
+                            <span>Primer Semestre, 2023</span>
+                            <span>
+                                <svg class="me-2" width="1em" height="1em"><use href="#licencia"></use></svg>
+                                <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" class="link-dark">Atribución-NoComercial-CompartirIgual 4.0 Internacional</a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            const datos = [
+                {
+                    tema: "Plomo en Arica",
+                    carpeta: "arica",
+                },
+                {
+                    tema: "Basural de ropa en el Desierto de Atacama",
+                    carpeta: "atacama",
+                },
+                {
+                    tema: "Mujeres y agua en San Pedro de Melipilla",
+                    carpeta: "melipilla",
+                },
+                {
+                    tema: "Parque eólico en Chiloé",
+                    carpeta: "chiloe",
+                },
+                {
+                    tema: "Planta de celulosa Licancel",
+                    carpeta: "licancel",
+                },
+                {
+                    tema: "Proyecto hidroeléctrico Alto Maipo",
+                    carpeta: "alto-maipo",
+                },
+                {
+                    tema: "Proyecto inmobiliario Bosque El Panul",
+                    carpeta: "el-panul",
+                },
+                {
+                    tema: "Proyecto minero Pampa Hermosa",
+                    carpeta: "pampa-hermosa",
+                },
+                {
+                    tema: "Salmoneras en la Reserva Nacional Kawésqar",
+                    carpeta: "kawesqar",
+                },
+                {
+                    tema: "Usurpación de agua en la Provincia de Petorca",
+                    carpeta: "petorca",
+                },
+            ];
+
+            const donde = document.querySelector("#otres");
+
+            datos.forEach((d, i) => {
+                if (i == 0) {
+                    donde.innerHTML += '<div class="col"><div class="card h-100"><div class="card-body"><p class="m-0 text-body-tertiary">' + d.tema + "</p></div></div></div>";
+                } else {
+                    donde.innerHTML += '<div class="col"><div class="card h-100"><div class="card-body"><p class="m-0"><a href="https://disenouchile.github.io/aud5v001-2-2023-1/final/' + d.carpeta + '" class="stretched-link link-secondary link-underline-opacity-25 link-underline-opacity-100-hover">' + d.tema + '</a></p></div></div></div>';
+                }
+            });
+        </script>
+    </body>
+</html>

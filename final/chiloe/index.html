@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Parque Eólico Chiloé</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+        <style>
+            @media (min-width: 768px) {
+                .container {
+                    max-width: 720px;
+                }
+            }
+
+            aside,
+            footer {
+                font-size: 90%;
+            }
+
+            dl dd {
+                padding-left: 1rem;
+                text-indent: -1rem;
+            }
+            em {
+                font-style: normal;
+                font-weight: bold;
+            }
+
+            figcaption p {
+                font-size: 80%;
+                color: gray;
+                text-align: center;
+            }
+            /* la línea de tiempo */
+            #timeline {
+                height: 50vh;
+                width: 100%;
+                overflow-y: hidden;
+                overflow-x: scroll;
+            }
+            #timeline::-webkit-scrollbar {
+                height: 0.5rem;
+            }
+
+            #timeline::-webkit-scrollbar-track {
+                background: #eee;
+            }
+
+            #timeline::-webkit-scrollbar-thumb {
+                background: #ddd;
+            }
+
+            #timeline::-webkit-scrollbar-thumb:hover {
+                background: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="licencia" viewBox="0 0 16 16" fill="currentColor">
+                <path
+                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM5.408 5.89c-.83 0-1.318.64-1.318 1.753v.742c0 1.108.479 1.727 1.318 1.727.69 0 1.138-.435 1.187-1.05h1.147v.114c-.058 1.147-1.029 1.938-2.343 1.938-1.612 0-2.518-1.028-2.518-2.729v-.747c0-1.7.914-2.75 2.518-2.75 1.319 0 2.29.812 2.343 1.999v.11H6.595c-.049-.638-.506-1.108-1.187-1.108Zm5.404 0c-.831 0-1.319.64-1.319 1.753v.742c0 1.108.48 1.727 1.319 1.727.69 0 1.138-.435 1.186-1.05h1.147v.114c-.057 1.147-1.028 1.938-2.342 1.938-1.613 0-2.518-1.028-2.518-2.729v-.747c0-1.7.914-2.75 2.518-2.75 1.318 0 2.29.812 2.342 1.999v.11h-1.147c-.048-.638-.505-1.108-1.186-1.108Z"
+                />
+            </symbol>
+        </svg>
+        <nav class="pt-3 shadow-sm">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <p class="d-flex justify-content-around small fw-bold">
+                            <a href="https://uchile.cl/" target="_blank" rel="noopener noreferrer" class="link-dark link-opacity-25 link-opacity-50-hover text-decoration-none">Universidad de Chile</a>
+                            <a href="https://fau.uchile.cl/carreras/4929/diseno" target="_blank" rel="noopener noreferrer" class="link-dark link-opacity-25 link-opacity-50-hover text-decoration-none">Diseño en Visualidad y Medios</a>
+                            <a href="https://github.com/disenouchile/aud5v001-2-2023-1/" target="_blank" rel="noopener noreferrer" class="link-dark link-opacity-25 link-opacity-50-hover text-decoration-none">Proyecto V</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <header class="container">
+            <div class="row mt-3">
+                <div class="col-11 col-sm-10 mx-auto">
+                    <div class="text-center">
+                        <img class="w-25 mx-auto my-4" src="img/grafica-00-cabecera.png" />
+                        <h2 class="fs-5"><a href="https://disenouchile.github.io/aud5v001-2-2023-1/final/" class="link-secondary link-underline-opacity-10 link-underline-opacity-50-hover">Comprender, desafiar y transformar</a></h2>
+                        <h1>Parque Eólico Chiloé</h1>
+                        <address class="mb-5">
+                            <p class="fw-bold">
+                                Por Ignacia Quiroga, Emilia Gálvez y Isidora Retamal<br />
+                                <span class="small text-body-secondary">PUBLICADO EL 6 DE JULIO DE 2023</span>
+                            </p>
+                        </address>
+                    </div>
+                    <p class="lead">
+                        Desde el 2010 se ha estado desarrollando el proyecto Parque Eólico Chiloé, a ubicarse en el sector de Mar Brava, en el noroeste de la Isla Grande de Chiloé. En tal ubicación, esta alternativa de energía verde,
+                        afectaría negativamente el medioambiente, la economía ecoturística y la cultura chilota.
+                    </p>
+                </div>
+            </div>
+        </header>
+        <main>
+            <article>
+                <div class="container">
+                    <div class="row">
+                        <figure class="col-12">
+                            <object data="img/mapa.png" type="image/svg+xml" class="w-100 my-2"></object>
+                            <figcaption>
+                                <p>
+                                    Mapa zona playa Mar Brava, Comuna de Ancud, Chiloe.
+                                </p>
+                            </figcaption>
+                        </figure>
+
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <p>
+                                Este proyecto eólico planea situarse en la zona costera del noroeste de la comuna de Ancud, Isla Grande de Chiloé, Región de Los Lagos, específicamente en la bahía de mar brava y la reserva de Puñihuil. Gracias a una gran riqueza en biodiversidad, calidad paisajística, patrimonio arqueológico y cultural, esta zona constituye el principal eje turístico de la comuna.  
+                            </p>
+                        </div>
+
+                        <figure class="col-sm-6">
+                            <object data="img/piedra_run" type="image/svg+xml" class="w-100 my-2"></object>
+                            <figcaption>
+                                <p>Foto de la Piedra Run,  https://www.ancud.cl/mar-brava/</p>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="col-sm-6">
+                            <object data="img/cabalgata.png" type="image/svg+xml" class="w-100 my-2"></object>
+                            <figcaption>
+                                <p>Foto de cabalgata por la playa, , la pueden sacar de https://www.ancud.cl/mar-brava/</p>
+                            </figcaption>
+                        </figure>
+
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <p>
+                                TEXTO OTRAS ACTIVIDADES TURISTICAS
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <h3 class="fs-4 text-center my-2">Un proyecto de energía verde</h3>
+                            <p>
+
+                                Se define como energía verde a toda energía que provenga de recursos proporcionados por la naturaleza, ya que son limpias (no dañan el medioambiente como los combustibles fósiles) e inagotables (como el viento). Pueden reponerse más rápido de lo que se consumen.
+
+La energía renovable es aquella que se obtiene a partir de una fuente inagotable, se renuevan más rápido que el propio consumo de la misma, pero que no necesariamente es amable con el medio ambiente
+
+Todas las energías verdes son renovables, pero no todas las renovables son verdes.
+
+                            
+                            </p>
+                            <p>
+                                La fuente primaria de la matriz chilena es el carbón, que aporta un 41% del total, seguido por la biomasa (26%) y el gas natural (15%), Todas las plantas hidroeléctricas en funcionamiento aportan un 11% a la
+                                matriz eléctrica chilena y el el 6% restante lo aportan la energía eólica y solar combinadas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <figure class="col-sm-4">
+                            <object data="img/grafica-landscape.svg" type="image/svg+xml" class="w-100 my-2"></object>
+                            <figcaption>
+                                <p>Gráfica mixta de biomasa: Una foto y un mapa de Chile que indique dónde se pudo haber tomado.</p>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="col-sm-4">
+                            <object data="img/grafica-landscape.svg" type="image/svg+xml" class="w-100 my-2"></object>
+                            <figcaption>
+                                <p>Gráfica mixta de solar: Una foto y un mapa de Chile que indique dónde se pudo haber tomado.</p>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="col-sm-4">
+                            <object data="img/grafica-landscape.svg" type="image/svg+xml" class="w-100 my-2"></object>
+                            <figcaption>
+                                <p>Gráfica mixta de eólica: Una foto y un mapa de Chile que indique dónde se pudo haber tomado.</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <p>
+                                Ecopower,es una empresa que opera principalmente en el sector terciario de la economía basándose en el modelo extractivista. Ofrece principalmente servicios relacionados con la energía eléctrica, específicamente con la energía eólica  integrando a Suecia como principal ejemplar, ya que este país aspira a alcanzar el 100% de producción de electricidad renovable en 2040.
+-Fue fundada en 2007 con capitales nacionales y suecos, cuenta con una inversión de US$ 250 millones para el proyecto 
+-Actualmente su CEO es Julio Albarrán Ríos y su gerente de operaciones es Patricio Ponce.
+                            </p>
+
+                            <figure>
+                                <object data="img/aerogenerador.png" type="image/svg+xml" class="w-100 my-2"></object>
+                                <figcaption>
+                                    <p>Gráfica funcionamiento energía eólica y transformación de energía.</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <h3 class="fs-4 text-center my-2">Impacto del proyecto del Parque eólico Chiloé</h3>
+
+                            <p>
+                                Afecta directamente el ecosistema consolidado en la zona, como las modificaciones del suelo, erosión, alteración arqueológica y pérdida del valor paisajístico. También afecta considerablemente a más de 3000 aves migratorias (perjudicadas por la contaminación acústica), además de las cientos de especies terrestres endémicas. Influye también negativamente en el avistamiento de cetáceos, ya que la zona de Mar Brava posee la mayor concentración de ballenas azules del hemisferio sur
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <figure class="col-12">
+                        <object data="img/grafica-landscape.svg" type="image/svg+xml" class="w-100 my-2"></object>
+                        <figcaption>
+                            <p>Fauna de la zona: Copiar estilo de la gráfica figurativa central en https://multimedia.scmp.com/infographics/news/china/article/3064927/wildlife-ban/index.html</p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <p>
+                                Las actividades productivas presentes en el área de estudio se vinculan a labores agrícolas, ganaderas, de pesca artesanal y turísticas (ecoturismo), desde un enfoque rural y ecológico, las cuales se verían afectadas con la instalación de estas megaestructuras, afectando de manera directa la economía interna de la zona.
+
+                            </p>
+
+                            <figure>
+                                <img src="img/grafica-landscape.svg" class="w-100 my-2"/>
+                                <figcaption>
+                                    <p>Foto pescadores artesanales</p>
+                                </figcaption>
+                            </figure>
+
+                            <p>
+                                Dentro de la zona, nos encontramos también con las pinguineras de Puñihuil, Los islotes de Puñihuil son tres y tienen una superficie aproximada total de 9 hectáreas. Fueron declarados "Monumento Natural" en 1999 por decreto nº 130 del Ministerio de Agricultura.
+Los Monumentos Naturales corresponden a unidades que han sido creadas para proteger especies nativas de flora y fauna, o sitios geológicos relevantes desde el punto de vista escénico, cultural, educativo o científico.
+
+                            </p>
+
+                            <figure>
+                                <img src="img/grafica-landscape.svg" class="w-100 my-2"/>
+                                <figcaption>
+                                    <p>Foto Pingüineras de Puñihuil. Ver: https://www.ancud.cl/punihuil/</p>
+                                </figcaption>
+                            </figure>
+
+                            <p>
+                                El discurso sustentable social, surgido por la comunidad Huilliches que habitan la zona (aproximadamente 5000 habitantes) en contra la invasibidad del proyecto eólico, quienes hacen hincapié en la cosmovisión y conservación del territorio sagrado. Además, se creó una desconfianza entre los agentes principales del proyecto y los habitantes debido a la nula consideración respecto al proyecto eólico, sin ser consultados previamente.
+                        
+                            </p>
+
+                            <figure>
+                                <img src="img/grafica-landscape.svg" class="w-100 my-2"/>
+                                <figcaption>
+                                    <p>Foto comunidades Huillinches.</p>
+                                </figcaption>
+                            </figure>
+
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+
+
+            <article>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <h3 class="fs-4 text-center my-2">Las políticas del proyecto</h3>
+
+                            <p>
+                                Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant dolorum an. Per facer affert ut. Mei iisque mentitum moderatius cu. Sit munere facilis accusam eu dicat falli consulatu at vis. Te facilisis mnesarchum qui posse omnium mediocritatem est cu.
+                            </p>
+
+                            <figure>
+                                <object data="img/grafica-portrait.svg" type="image/svg+xml" class="w-100 my-2"></object>
+                                <figcaption>
+                                    <p>Linea de tiempo hitos políticos desde el inicio a la actualidad.</p>
+                                </figcaption>
+                            </figure>
+
+                            <p>
+                                Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant dolorum an. Per facer affert ut. Mei iisque mentitum moderatius cu. Sit munere facilis accusam eu dicat falli consulatu at vis. Te facilisis mnesarchum qui posse omnium mediocritatem est cu.
+                            </p>
+
+                            <figure>
+                                <img src="img/grafica-landscape.svg" class="w-100 my-2"/>
+                                <figcaption>
+                                    <p>Avistamiento de actividad en el área, año 2023.</p>
+                                </figcaption>
+                            </figure>
+
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+
+        </main>
+
+        <aside class="container">
+            <div class="row mb-5">
+                <dl class="col-11 col-sm-10 mx-auto mt-5">
+                    <dt class="mb-2">Fuentes</dt>
+                    <dd>Primera fuente en orden alfabético. Usar APA 7ª Versión</dd>
+                    <dd>Segunda fuente en orden alfabético. Usar APA 7ª Versión</dd>
+                    <dd>Tercera fuente en orden alfabético. Usar APA 7ª Versión</dd>
+                    <dd>Cuarta fuente en orden alfabético. Usar APA 7ª Versión</dd>
+                    <dd>Quinta fuente en orden alfabético. Usar APA 7ª Versión</dd>
+                </dl>
+
+                <dl class="col-11 col-sm-10 mx-auto mt-2 mb-5">
+                    <dt class="mb-2">Editado por</dt>
+
+                    <dd>Josefa Birkelbach, Felipe Cortez y Luciana Oropesa</dd>
+                </dl>
+            </div>
+        </aside>
+
+        <footer class="bg-light border-top">
+            <div class="container-fluid pt-4 pb-5">
+                <div class="row">
+                    <div class="col-sm-11 mx-auto">
+                        <h4 class="fs-6 my-4 ps-3 text-center">Más de Proyecto V</h4>
+
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4 small" id="otres"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid border-top py-4">
+                <div class="row">
+                    <div class="col-sm-11 mx-auto">
+                        <p class="px-3 d-flex justify-content-between align-items-center">
+                            <span>Primer Semestre, 2023</span>
+                            <span>
+                                <svg class="me-2" width="1em" height="1em"><use href="#licencia"></use></svg>
+                                <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" class="link-dark">Atribución-NoComercial-CompartirIgual 4.0 Internacional</a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            const datos = [
+                {
+                    tema: "Proyecto hidroeléctrico Alto Maipo",
+                    carpeta: "alto-maipo",
+                },
+                {
+                    tema: "Basural de ropa en el Desierto de Atacama",
+                    carpeta: "atacama",
+                },
+                {
+                    tema: "Mujeres y agua en San Pedro de Melipilla",
+                    carpeta: "melipilla",
+                },
+                {
+                    tema: "Parque eólico en Chiloé",
+                    carpeta: "chiloe",
+                },
+                {
+                    tema: "Planta de celulosa Licancel",
+                    carpeta: "licancel",
+                },
+                {
+                    tema: "Plomo en Arica",
+                    carpeta: "arica",
+                },
+                {
+                    tema: "Proyecto inmobiliario Bosque El Panul",
+                    carpeta: "el-panul",
+                },
+                {
+                    tema: "Proyecto minero Pampa Hermosa",
+                    carpeta: "pampa-hermosa",
+                },
+                {
+                    tema: "Salmoneras en la Reserva Nacional Kawésqar",
+                    carpeta: "kawesqar",
+                },
+                {
+                    tema: "Usurpación de agua en la Provincia de Petorca",
+                    carpeta: "petorca",
+                },
+            ];
+
+            const donde = document.querySelector("#otres");
+
+            datos.forEach((d, i) => {
+                if (i == 0) {
+                    donde.innerHTML += '<div class="col"><div class="card h-100"><div class="card-body"><p class="m-0 text-body-tertiary">' + d.tema + "</p></div></div></div>";
+                } else {
+                    donde.innerHTML += '<div class="col"><div class="card h-100"><div class="card-body"><p class="m-0"><a href="https://disenouchile.github.io/aud5v001-2-2023-1/final/' + d.carpeta + '" class="stretched-link link-secondary link-underline-opacity-25 link-underline-opacity-100-hover">' + d.tema + '</a></p></div></div></div>';
+                }
+            });
+        </script>
+    </body>
+</html>
