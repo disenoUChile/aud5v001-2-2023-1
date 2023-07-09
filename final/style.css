@@ -1,0 +1,53 @@
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+:root {
+    --bs-body-bg: #faf7f5;
+    --bs-link-color-rgb: 23, 27, 31;
+    --bs-link-hover-color-rgb: 0, 0, 0;
+}
+
+aside,
+footer {
+    font-size: 90%;
+}
+
+dl dd {
+    padding-left: 1rem;
+    text-indent: -1rem;
+}
+em {
+    font-style: normal;
+    font-weight: bold;
+}
+
+figcaption p {
+    font-size: 80%;
+    color: gray;
+    text-align: center;
+}
+/* la línea de tiempo */
+#timeline {
+    height: 50vh;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+#timeline::-webkit-scrollbar {
+    height: 0.5rem;
+}
+
+#timeline::-webkit-scrollbar-track {
+    background: #eee;
+}
+
+#timeline::-webkit-scrollbar-thumb {
+    background: #ddd;
+}
+
+#timeline::-webkit-scrollbar-thumb:hover {
+    background: #ccc;
+}
