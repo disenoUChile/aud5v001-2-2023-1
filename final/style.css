@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,600;0,800;1,400&display=swap');
+
 @media (min-width: 768px) {
     .container {
         max-width: 720px;
@@ -5,9 +7,13 @@
 }
 
 :root {
-    --bs-body-bg: #faf7f5;
+    --bs-body-font-family: 'Work Sans', sans-serif;
     --bs-link-color-rgb: 23, 27, 31;
     --bs-link-hover-color-rgb: 0, 0, 0;
+}
+
+body{
+    overflow-x: hidden;
 }
 
 aside,
@@ -19,9 +25,9 @@ dl dd {
     padding-left: 1rem;
     text-indent: -1rem;
 }
-em {
+dt, em, .fw-bold{
     font-style: normal;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 figcaption p {
@@ -29,25 +35,32 @@ figcaption p {
     color: gray;
     text-align: center;
 }
+
+h1{font-weight: 800;}
+
+h2,h3,h4,h5,h6{font-weight: 600;}
+
 /* la línea de tiempo */
-#timeline {
+
+.timeline {
     height: 50vh;
     width: 100%;
     overflow-y: hidden;
     overflow-x: scroll;
 }
-#timeline::-webkit-scrollbar {
+
+.timeline::-webkit-scrollbar {
     height: 0.5rem;
 }
 
-#timeline::-webkit-scrollbar-track {
+.timeline::-webkit-scrollbar-track {
     background: #eee;
 }
 
-#timeline::-webkit-scrollbar-thumb {
+.timeline::-webkit-scrollbar-thumb {
     background: #ddd;
 }
 
-#timeline::-webkit-scrollbar-thumb:hover {
+.timeline::-webkit-scrollbar-thumb:hover {
     background: #ccc;
 }
