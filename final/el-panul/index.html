@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Proyecto Inmobiliario Bosque el Panul</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+        <style>
+            @media (min-width: 768px) {
+                .container {
+                    max-width: 720px;
+                }
+            }
+
+            body{
+                overflow-x: hidden;
+            }
+
+            aside,
+            footer {
+                font-size: 90%;
+            }
+
+            dl dd {
+                padding-left: 1rem;
+                text-indent: -1rem;
+            }
+            em {
+                font-style: normal;
+                font-weight: bold;
+            }
+
+            figcaption p {
+                font-size: 80%;
+                color: gray;
+                text-align: center;
+            }
+            /* la línea de tiempo */
+            #timeline {
+                height: 50vh;
+                width: 100%;
+                overflow-y: hidden;
+                overflow-x: scroll;
+            }
+            #timeline::-webkit-scrollbar {
+                height: 0.5rem;
+            }
+
+            #timeline::-webkit-scrollbar-track {
+                background: #eee;
+            }
+
+            #timeline::-webkit-scrollbar-thumb {
+                background: #ddd;
+            }
+
+            #timeline::-webkit-scrollbar-thumb:hover {
+                background: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="licencia" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM5.408 5.89c-.83 0-1.318.64-1.318 1.753v.742c0 1.108.479 1.727 1.318 1.727.69 0 1.138-.435 1.187-1.05h1.147v.114c-.058 1.147-1.029 1.938-2.343 1.938-1.612 0-2.518-1.028-2.518-2.729v-.747c0-1.7.914-2.75 2.518-2.75 1.319 0 2.29.812 2.343 1.999v.11H6.595c-.049-.638-.506-1.108-1.187-1.108Zm5.404 0c-.831 0-1.319.64-1.319 1.753v.742c0 1.108.48 1.727 1.319 1.727.69 0 1.138-.435 1.186-1.05h1.147v.114c-.057 1.147-1.028 1.938-2.342 1.938-1.613 0-2.518-1.028-2.518-2.729v-.747c0-1.7.914-2.75 2.518-2.75 1.318 0 2.29.812 2.342 1.999v.11h-1.147c-.048-.638-.505-1.108-1.186-1.108Z" />
+            </symbol>
+        </svg>
+        <nav class="pt-3 shadow-sm">
+            <div class="container-fluid g-0">
+                <div class="row">
+                    <div class="col">
+                        <p class="d-flex justify-content-around small fw-bold">
+                            <a href="https://uchile.cl/" target="_blank" rel="noopener noreferrer" class="link-dark link-opacity-25 link-opacity-50-hover text-decoration-none">Universidad de Chile</a>
+                            <a href="https://fau.uchile.cl/carreras/4929/diseno" target="_blank" rel="noopener noreferrer" class="link-dark link-opacity-25 link-opacity-50-hover text-decoration-none">Diseño en Visualidad y Medios</a>
+                            <a href="https://github.com/disenouchile/aud5v001-2-2023-1/" target="_blank" rel="noopener noreferrer" class="link-dark link-opacity-25 link-opacity-50-hover text-decoration-none">Proyecto V</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <header class="container">
+            <div class="row mt-3">
+                <div class="col-11 col-sm-10 mx-auto">
+                    <div class="text-center">
+                        <img class="w-25 mx-auto my-4" src="img/grafica-00-cabecera.png" />
+                        <h2 class="fs-5"><a href="https://disenouchile.github.io/aud5v001-2-2023-1/final/" class="link-secondary link-underline-opacity-10 link-underline-opacity-50-hover">Comprender, desafiar y transformar</a></h2>
+                        <h1>Proyecto Inmobiliario Bosque el Panul</h1>
+                        <address class="mb-5">
+                            <p class="fw-bold">
+                                Bastián Lobos, Lucas Echeverría y Martín Bustos<br />
+                                <span class="small text-body-secondary">PUBLICADO EL 6 DE JULIO DE 2023</span>
+                            </p>
+                        </address>
+                    </div>
+                    <p class="lead">El Bosque Panul es el único bosque nativo que queda dentro del radio urbano de Santiago, ya extendido hasta la cota mil. Es el único bosque que resiste en la cota que le correspondería a los exclusivos condominios del barrio alto, ya encaramados entre las quebradas de la precordillera.</p>
+                </div>
+            </div>
+        </header>
+        <main>
+            <article>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-sm-10 pt-4 mx-auto">
+                            <p>En Chile, la <em>«cota mil»</em> se refiere a una <em>altura sobre el nivel del mar</em> y, también, a <em>una altura socioeconómica</em>. El término aplica al espacio vital de las élites, que se separa del gran resto que se ha sumado a la populosa centralización del país, centralización que ha hecho crecer el mapa urbano de Santiago desde la plaza de armas de los conquistadores españoles, hacia una amplia periferia.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid g-0">
+                    <div class="row">
+                        <figure class="col-sm-11 col-md-10 col-lg-9 mx-auto">
+                            <div id="carouselMapas" class="carousel slide carousel-fade mb-3">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselMapas" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselMapas" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselMapas" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#carouselMapas" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                    <button type="button" data-bs-target="#carouselMapas" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <!--primer mapa-->
+                                    <div class="carousel-item active">
+                                        <img src="img/grafica-01-mapa-1.png" class="d-block w-100" alt="..." />
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <p class="m-0">Santiago de Chile en el s.XVII</p>
+                                        </div>
+                                    </div>
+                                    <!--segundo mapa-->
+                                    <div class="carousel-item">
+                                        <img src="img/grafica-01-mapa-2.png" class="d-block w-100" alt="..." />
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <p class="m-0">Santiago de Chile en el s.XVIII</p>
+                                        </div>
+                                    </div>
+                                    <!--tercer mapa-->
+                                    <div class="carousel-item">
+                                        <img src="img/grafica-01-mapa-3.png" class="d-block w-100" alt="..." />
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <p class="m-0">Santiago de Chile en el s.XIX</p>
+                                        </div>
+                                    </div>
+                                    <!--cuarto mapa-->
+                                    <div class="carousel-item">
+                                        <img src="img/grafica-01-mapa-4.png" class="d-block w-100" alt="..." />
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <p class="m-0">Santiago de Chile en el s.XX</p>
+                                        </div>
+                                    </div>
+                                    <!--quinto mapa-->
+                                    <div class="carousel-item">
+                                        <img src="img/grafica-01-mapa-5.png" class="d-block w-100" alt="..." />
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <p class="m-0">Santiago de Chile en el s.XXI</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselMapas" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselMapas" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+
+                            <figcaption>
+                                <p>Crecimiento con centro en Plaza de Armas. Basado en Planos de Santiago en <a href="https://www.memoriachilena.gob.cl/602/w3-article-92314.html">Memoria Chilena</a></p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-sm-10 mx-auto">
+                            
+                            <p>Este crecimiento del mapa urbano responde al aumento de la población santiaguina, que a principios del siglo XX apenas superaba los 500 mil habitantes y hoy, en la segunda década del siglo XXI, ya supera los 7 millones de habitantes.
+                            </p>
+
+                            <figure>
+                                <div class="text-center small table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">CENSO</th>
+                                                <th scope="col">TODO CHILE</th>
+                                                <th scope="col">SANTIAGO DE CHILE</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="table-group-divider">
+                                            <tr>
+                                                <th scope="row">1907</th>
+                                                <td>3.231.022 habitantes</td>
+                                                <td>516.870 habitantes</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">1920</th>
+                                                <td>3.720.235 habitantes</td>
+                                                <td>Buscar número de habitantes</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">1930</th>
+                                                <td>4.287.445 habitantes</td>
+                                                <td>Buscar número de habitantes</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">1940</th>
+                                                <td>5.023.539 habitantes</td>
+                                                <td>Buscar número de habitantes</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">1952</th>
+                                                <td>5.932.995 habitantes</td>
+                                                <td>Buscar número de habitantes</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">1960</th>
+                                                <td>7.374.115 habitantes</td>
+                                                <td>Buscar número de habitantes</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">1970</th>
+                                                <td scope="row">8.884.768 habitantes</td>
+                                                <td>Buscar número de habitantes</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">1982</th>
+                                                <td>11.329.736 habitantes</td>
+                                                <td>Buscar número de habitantes</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">1992</th>
+                                                <td>13.348.401 habitantes</td>
+                                                <td>Buscar número de habitantes</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2002</th>
+                                                <td>15.116.435 habitantes</td>
+                                                <td>Buscar número de habitantes</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2012</th>
+                                                <td class="text-body-secondary">Resultado retirados por el INE</td>
+                                                <td class="text-body-secondary">Resultado retirados por el INE</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2017</th>
+                                                <td>17.574.003 habitantes</td>
+                                                <td>7.112.808 habitantes</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <figcaption class="mb-5">
+                                    <p>Tabla con los habitantes censados durante los siglos XX y XXI en Chile y la Región Metropolitana de Santiago de Chile.</p>
+                                </figcaption>
+                            </figure>
+
+                            <p>Pero la cota mil se encuentra en el sector oriente de la urbanización de la Región Metropolitana, subiendo por los faldeos de la cordillera de los Andes, alcanzando y superando la <em>Falla de Ramón</em>.</p>
+
+                            <figure class="mb-4">
+                            <div id="carouselSatelitales" class="carousel slide carousel-fade mb-3">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselSatelitales" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselSatelitales" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselSatelitales" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#carouselSatelitales" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                    <button type="button" data-bs-target="#carouselSatelitales" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                    <button type="button" data-bs-target="#carouselSatelitales" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <!--primera foto satelital-->
+                                    <div class="carousel-item active">
+                                        <img src="img/grafica-02-1987.jpg" class="d-block w-100" alt="..." />
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <p class="m-0">Sector oriente en 1987</p>
+                                        </div>
+                                    </div>
+                                    <!--segunda foto satelital-->
+                                    <div class="carousel-item">
+                                        <img src="img/grafica-02-1993.jpg" class="d-block w-100" alt="..." />
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <p class="m-0">Sector oriente en 1993</p>
+                                        </div>
+                                    </div>
+                                    <!--tercera foto satelital-->
+                                    <div class="carousel-item">
+                                        <img src="img/grafica-02-1999.jpg" class="d-block w-100" alt="..." />
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <p class="m-0">Sector oriente en 1999</p>
+                                        </div>
+                                    </div>
+                                    <!--cuarta foto satelital-->
+                                    <div class="carousel-item">
+                                        <img src="img/grafica-02-2008.jpg" class="d-block w-100" alt="..." />
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <p class="m-0">Sector oriente en 2008</p>
+                                        </div>
+                                    </div>
+                                    <!--quinta foto satelital-->
+                                    <div class="carousel-item">
+                                        <img src="img/grafica-02-2014.jpg" class="d-block w-100" alt="..." />
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <p class="m-0">Sector oriente en 2014</p>
+                                        </div>
+                                    </div>
+                                    <!--sexta foto satelital-->
+                                    <div class="carousel-item">
+                                        <img src="img/grafica-02-2020.jpg" class="d-block w-100" alt="..." />
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <p class="m-0">Sector oriente en 2020</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselSatelitales" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselSatelitales" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            
+                            <figcaption>
+                                <p>Sector oriente de Santiago, entre 1987 y 2020. Imágenes tomadas de <a href="https://earthengine.google.com/timelapse#v=-33.44888,-70.66926,10,latLng&t=0.03&ps=50&bt=19840101&et=20201231&startDwell=0&endDwell=0" target="_blank">Google Eath Engine</a>.</p>
+                                </figcaption>
+                            </figure>
+
+                            <p>Sector oriente que fue "purificado" para las élites a fuerza de erradicaciones sistemáticas llevadas a cabo en la <em>Dictadura Cívico-Militar</em> encabezada por Pinochet.</p>
+
+                            <figure class="px-1 px-sm-2 px-md-3 px-lg-4 mb-5">
+                                <img src="img/grafica-03-erradicacion.png" class="w-100 my-2" />
+                                <figcaption>
+                                    <p>Diagrama del relocalización socio-espacial de la pobreza, política estatal y presión popular 1979-1985. Tomado de: <a href="https://www.memoriachilena.gob.cl/602/w3-article-618466.html">Memoria Chilena</a>
+                                    </p>
+                                </figcaption>
+                            </figure>
+
+                            <p>
+                                Por este proceso, los términos <em>sector oriente, barrio alto y cota mil son intercambiables</em>.
+                            </p>
+                            <p>
+                                Luego, quien quiera demostrar una mejor posición socioeconómica, debe intalarse tan alto en el oriente como lo permita la legislación vigente que no respeta los espacios vitales de la vida silvestre de los faldeos de la cordillera de los Andes.
+                            </p>
+                        </div>
+
+                        <figure class="col-md-6">
+                            <img src="img/grafica-04-condor.jpg" class="w-100 my-2" />
+                            <figcaption>
+                                <p class="px-2">Un cóndor en una terraza del sector oriente de Santiago. Fotografía del año ???, publicada en ???.</p>
+                            </figcaption>
+                        </figure>
+                        <figure class="col-md-6">
+                            <img src="img/grafica-04-puma.jpg" class="w-100 my-2" />
+                            <figcaption>
+                                <p class="px-2">Un puma en un condominio del sector oriente de Santiago. Fotografía del año ???, publicada en ???.</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <h3 class="fs-4 text-center mt-5 mb-3">El último bosque que resiste en la cota mil</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid g-0">
+                    <div class="row">
+                        <figure class="col-sm-11 col-md-10 col-lg-9 mx-auto">
+                            <img src="img/grafica-05-mapa.png" class="w-100" />
+                            <figcaption>
+                                <p>
+                                    Mapa del bosque de El Panul
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <p>
+                                Ubicado en la precordillera de lo Andes, <em>el Bosque Panul</em>, de carácter esclerófilo y con una superficie de 1.000 ha aproximadamente, es un <em>pulmón verde</em> que permite sobrellevar un poco más la contaminación
+                                característica de Santiago, además de <em>proveer protección contra aluviones e inundaciones</em> y regular la temperatura de las calurosas tardes de verano.
+                            </p>
+                            
+                            <h4 class="fs-5 text-center mt-5 mb-3">Flora y fauna de bosque</h4>
+
+                            <p>
+                                Según un catastro solicitado por la <a href="https://fomentolaflorida.cl/sobre-nosotros/">Coorporación de Fomento La Florida (COFODEP)</a> y generado por <a href="https://www.sgasa.cl/sga/">Gestión Ambiental S.A. (SGA)</a> durante enero de 2015, el bosque protege una cantidad importante de flora y fauna autóctona:
+                            </p>
+                            <p>En el caso de <em>flora</em>:</p>
+                            <ul>
+                                <li><em>8 especies de árboles</em>, como el Maitén, Peumo, Bollén y Quilla, entre otros.</li>
+                                <li><em>9 especies arbustivas</em>, como el Mitique, Espino y Colliguay.</li>
+                                <li><em>25 especies herbáceas</em>, que incluye la Flor de Gallo, la Flor de Culebra, Añañuca y Panul, entre otras.</li>
+                            </ul>
+
+                            <p>En el caso de la <em>fauna</em>:</p>
+                            <ul class="mb-5">
+                                <li><em>9 especies de reptiles</em>, como la Culebra de cola larga, la Lagartija esbelta, el Lagarto nítido y la Iguana chilena.</li>
+                                <li><em>15 especies de mamíferos</em>, como el Murciélago cola de ratón, el Zorro culpeo, el Degu y Cururo.</li>
+                                <li><em>54 especies aves</em>, considerado el grupo más importante por esta cifra, que incluye a la Perdiz chilena, el Águila mora, el Carpinterito, el Tiuque y el Queltehue, por ejemplo.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid g-0">
+                    <div class="row">
+                        <figure class="col-md-6 mb-5">
+                            <object data="img/grafica-06-flora.svg" type="image/svg+xml" class="w-100"></object>
+                            <figcaption>
+                                <p>Flora autóctona protegida en el Bosque el Panul</p>
+                            </figcaption>
+                        </figure>
+                        <figure class="col-md-6 mb-5">
+                            <object data="img/grafica-06-fauna.svg" type="image/svg+xml" class="w-100"></object>
+                            <figcaption>
+                                <p>Fauna autóctona protegida en el Bosque el Panul</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <p>
+                                El origen y significado del nombre de este bosque es bastante incierto. Se cree que este bosque podría haber sido una ruta en la que los nativos podían viajar tramos largos sin necesidad de parar, esto porque podían comer los frutos del camino y usar las quebradas y vertientes como fuentes de hidratación. Lo más probable es que el nombre de Panul, venga de su <em>condición geográfica</em> y que el nombre que se le otorgó sólo una deformación de la palabra <em>"Pañul"</em> que significa <em>"Brillo / Reflejo del Sol"</em>.
+                            </p>
+
+                            <figure>
+                                <img src="img/grafica-07-panul.jpg" class="w-100 mt-3" />
+                                <figcaption>
+                                    <p class="mt-2">Foto panorámica del lugar, de color tan distintos del verdecito de utilería del barrio alto.</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <h4 class="fs-5 text-center my-5">La historia de la resistencia</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid g-0">
+                    <div id="timeline">
+                        <object data="img/grafica-08-linea-de-tiempo.svg" type="image/svg+xml" class="h-100"></object>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-sm-10 mt-3 mx-auto">
+                            <p>
+                                Desde hace varios años los vecinos, agrupados en la <a href="https://redprecordillera.cl/"><em>Red por la Defensa de la Precordillera</em></a>, exigen una <em>modificación del Plan Regulador</em>,
+                                argumentando riesgos naturales en la zona y solicitando el congelamiento de los permisos de edificación mientras no se conozcan los verdaderos alcances de un proyecto en el piedemonte andino.
+                            </p>
+
+                            <figure>
+                                <img src="img/grafica-09-mapa.png" class="w-100 mt-3" />
+                                <figcaption>
+                                    <p>
+                                        Mapa coroplético de los terrenos cedidos, regalados, vendidos, expropiados, etc. del Panul y la Precordillera. Gráfica no figurativa.
+                                        <a href="http://www.gomoodboard.com/boards/ruRETabs/share">http://www.gomoodboard.com/boards/ruRETabs/share</a>
+                                    </p>
+                                </figcaption>
+                            </figure>
+
+                            <figure>
+                                <img src="img/grafica-10-proyecto.png" class="w-100 mt-3" />
+                                <figcaption>
+                                    <p>
+                                        Mapa del proyecto, intentar usar el estilo del primer mapa, para poder darle "cierre" a toda la página (ley de cierre Gestalt)
+                                        <a href="http://www.gomoodboard.com/boards/lioS2y7O/share">http://www.gomoodboard.com/boards/lioS2y7O/share</a>
+                                    </p>
+                                </figcaption>
+                            </figure>
+
+                            <p>
+                                Actualmente el bosque corre serio peligro de ser talado, 600 hectáreas que acogen flora y fauna se encuentran en peligro de extinción. <em>La inmobiliaria Gesterra S.A</em> pretende llevar a cabo allí el
+                                <em>proyecto inmobiliario</em> denominado “El Panul”, que tiene como objetivo el desarrollo inmobiliario de una parte del terreno del fundo El Panul, ubicado en la comuna de La Florida, mediante la
+                                construcción de un total de <em>1.302 viviendas</em>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <aside class="container">
+            <div class="row mb-5">
+                <dl class="col-11 col-sm-10 mx-auto mt-5">
+                    <dt class="mb-2">Fuentes</dt>
+                    <dd>
+                        Totora Navarro, J. (2020). La diversidad biocultural como herramienta para la conservación del parque comunitario Panul. [Memoria para optar al título de geógrafa]. Universidad de Chile:
+                        <a href="https://repositorio.uchile.cl/handle/2250/176159">https://repositorio.uchile.cl/handle/2250/176159</a>
+                    </dd>
+                    <dd>
+                        Cabezas Mayanes, V.E. y Pavez Va/des, V.A. (2018). El Panul, Conflictos en verde: Reflexiones sobre un bosque en peligro. [Memoria para optar al título de periodista}. Universidad de Chile. URL:
+                        <a href="https://repositorio.uchile.cl/handle/2250/151422">https:llrepositorio.uchile.cllhandle/2250/151422</a>
+                    </dd>
+                    <dd>
+                        Cronología de la lucha por el bosque.(s/f). (s/a). Red por la defensa de la Precordillera. URL: https:
+                        <a href="https://redprecordillera.cl/el-conflicto/cronologia">https://redprecordillera.cl/el-conflicto/cronologia</a>
+                    </dd>
+                    <dd>
+                        González,E. (slf). Observación Ciudadana. "Proyecto Inmobiliario El Panul". SEA. URL:
+                        <a href="https://seia.sea.gob.cl/documentos/documento.php?idDocumento=6502995">https://seia.sea.gob.cl/documentos/documento.php?idDocumento=6502995</a>
+                    </dd>
+                    <dd>
+                        Zavala, P. (slf). Observación Ciudadana. "Proyecto Inmobiliario El Panul". SEA. URL:
+                        <a href="https://seia.sea.gob.cl/documentos/documento.php?idDocumento=6475508">https://seia.sea.gob.cl/documentos/documento.php?idDocumento=6475508</a>
+                    </dd>
+                </dl>
+
+                <dl class="col-11 col-sm-10 mx-auto mt-2 mb-5">
+                    <dt class="mb-2">Editado por</dt>
+
+                    <dd>Josefa Birkelbach, Felipe Cortez y Luciana Oropesa</dd>
+                </dl>
+            </div>
+        </aside>
+
+        <footer class="bg-light border-top">
+            <div class="container-fluid pt-4 pb-5">
+                <div class="row">
+                    <div class="col-sm-11 mx-auto">
+                        <h4 class="fs-6 my-4 ps-3 text-center">Más de Proyecto V</h4>
+
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4 small" id="otres"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid border-top py-4">
+                <div class="row">
+                    <div class="col-sm-11 mx-auto">
+                        <p class="px-3 d-flex justify-content-between align-items-center">
+                            <span>Primer Semestre, 2023</span>
+                            <span>
+                                <svg class="me-2" width="1em" height="1em"><use href="#licencia"></use></svg>
+                                <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" class="link-dark">Atribución-NoComercial-CompartirIgual 4.0 Internacional</a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            const datos = [
+                {
+                    tema: "Proyecto inmobiliario Bosque El Panul",
+                    carpeta: "el-panul",
+                },
+                {
+                    tema: "Basural de ropa en el Desierto de Atacama",
+                    carpeta: "atacama",
+                },
+                {
+                    tema: "Mujeres y agua en San Pedro de Melipilla",
+                    carpeta: "melipilla",
+                },
+                {
+                    tema: "Parque eólico en Chiloé",
+                    carpeta: "chiloe",
+                },
+                {
+                    tema: "Planta de celulosa Licancel",
+                    carpeta: "licancel",
+                },
+                {
+                    tema: "Plomo en Arica",
+                    carpeta: "arica",
+                },
+                {
+                    tema: "Proyecto hidroeléctrico Alto Maipo",
+                    carpeta: "alto-maipo",
+                },
+                {
+                    tema: "Proyecto minero Pampa Hermosa",
+                    carpeta: "pampa-hermosa",
+                },
+                {
+                    tema: "Salmoneras en la Reserva Nacional Kawésqar",
+                    carpeta: "kawesqar",
+                },
+                {
+                    tema: "Usurpación de agua en la Provincia de Petorca",
+                    carpeta: "petorca",
+                },
+            ];
+
+            const donde = document.querySelector("#otres");
+
+            datos.forEach((d, i) => {
+                if (i == 0) {
+                    donde.innerHTML += '<div class="col"><div class="card h-100"><div class="card-body"><p class="m-0 text-body-tertiary">' + d.tema + "</p></div></div></div>";
+                } else {
+                    donde.innerHTML += '<div class="col"><div class="card h-100"><div class="card-body"><p class="m-0"><a href="https://disenouchile.github.io/aud5v001-2-2023-1/final/' + d.carpeta + '" class="stretched-link link-secondary link-underline-opacity-25 link-underline-opacity-100-hover">' + d.tema + '</a></p></div></div></div>';
+                }
+            });
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    </body>
+</html>
