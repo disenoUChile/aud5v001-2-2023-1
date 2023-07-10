@@ -8,7 +8,7 @@
 
 → [https://disenouchile.github.io/aud5v001-2-2023-1/testing/](https://disenouchile.github.io/aud5v001-2-2023-1/testing/)
 
-**Pictogramas sobre acoso sexual, familia y violencia, y trabajo**. Referencia principal: Pictograma del Diseñador [Sergio Ramírez Flores](http://www.ramirezflores.cl/):
+**Pictogramas sobre acoso sexual, familia y violencia, y trabajo**. Referencia principal: Pictogramas desarrollados por el Diseñador [Sergio Ramírez Flores](http://www.ramirezflores.cl/):
 
 → [https://disenouchile.github.io/aud5v001-2-2023-1/p5u2](https://disenouchile.github.io/aud5v001-2-2023-1/p5u2)
 
