@@ -8,14 +8,14 @@
 
 → [https://disenouchile.github.io/aud5v001-2-2023-1/testing/](https://disenouchile.github.io/aud5v001-2-2023-1/testing/)
 
-**Cierre de Unidad 2:**
+**Pictogramas sobre acoso sexual, familia y violencia, y trabajo**:
 
 → [https://disenouchile.github.io/aud5v001-2-2023-1/p5u2](https://disenouchile.github.io/aud5v001-2-2023-1/p5u2)
 
-**Primer Proyecto de Unidad 3**
+**Primera versión de infografías digitales sobre conflictos socioambientales**:
 
 → [https://disenouchile.github.io/aud5v001-2-2023-1/p5u3](https://disenouchile.github.io/aud5v001-2-2023-1/p5u3)
 
-**Segundo Proyecto de Unidad 3**
+**Segunda versión de infografías digitales sobre conflictos socioambientales**
 
 → [https://disenouchile.github.io/aud5v001-2-2023-1/final](https://disenouchile.github.io/aud5v001-2-2023-1/final)
