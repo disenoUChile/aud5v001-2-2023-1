@@ -12,10 +12,10 @@
 
 → [https://disenouchile.github.io/aud5v001-2-2023-1/p5u2](https://disenouchile.github.io/aud5v001-2-2023-1/p5u2)
 
-**Primera versión de infografías digitales sobre conflictos socioambientales**:
+**Primera versión de infografías digitales sobre conflictos socioambientales**. Referencia principal: [Uganda’s anti-gay bill is the latest and worst to target LGBTQ Africans" en Reuters Graphics - Charts, Maps, Interactive Graphics and Videos](https://www.reuters.com/graphics/UGANDA-LGBT/movakykrjva/): 
 
 → [https://disenouchile.github.io/aud5v001-2-2023-1/p5u3](https://disenouchile.github.io/aud5v001-2-2023-1/p5u3)
 
-**Segunda versión de infografías digitales sobre conflictos socioambientales**
+**Segunda versión de infografías digitales sobre conflictos socioambientales**.  Referencia principal: [Reuters Graphics - Charts, Maps, Interactive Graphics and Videos](https://www.reuters.com/graphics/)
 
 → [https://disenouchile.github.io/aud5v001-2-2023-1/final](https://disenouchile.github.io/aud5v001-2-2023-1/final)
