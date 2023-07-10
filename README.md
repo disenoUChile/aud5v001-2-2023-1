@@ -16,6 +16,6 @@
 
 → [https://disenouchile.github.io/aud5v001-2-2023-1/p5u3](https://disenouchile.github.io/aud5v001-2-2023-1/p5u3)
 
-**Segunda versión de infografías digitales sobre conflictos socioambientales**.  Referencia principal: [Reuters Graphics - Charts, Maps, Interactive Graphics and Videos](https://www.reuters.com/graphics/)
+**Segunda versión de infografías digitales sobre conflictos socioambientales**.  Referencias principales: [Reuters Graphics - Charts, Maps, Interactive Graphics and Videos](https://www.reuters.com/graphics/), [SCMP Infographics](https://www.scmp.com/infographic/) y [SCMP Print Arcade](https://multimedia.scmp.com/culture/article/SCMP-printed-graphics-memory/): 
 
 → [https://disenouchile.github.io/aud5v001-2-2023-1/final](https://disenouchile.github.io/aud5v001-2-2023-1/final)
