@@ -36,7 +36,7 @@ figcaption p {
     text-align: center;
 }
 
-h1{font-weight: 700; font-size:calc(2rem + 2vw);}
+h1{font-weight: 700; font-size:calc(1.618rem + 1.618vw);}
 
 h2,h3,h4,h5,h6{font-weight: 600;}
 
