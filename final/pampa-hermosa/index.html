@@ -5,9 +5,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Proyecto minero Pampa Hermosa</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
-        <link href="../style.css" rel="stylesheet" />
+        <style>
+            @media (min-width: 768px) {
+                .container {
+                    max-width: 720px;
+                }
+            }
+
+            aside,
+            footer {
+                font-size: 90%;
+            }
+
+            dl dd {
+                padding-left: 1rem;
+                text-indent: -1rem;
+            }
+            em{
+                font-style: normal;
+                font-weight: bold;
+            }
+        </style>
     </head>
-    <body class="bg-body-tertiary">
+    <body>
         <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
             <symbol id="licencia" viewBox="0 0 16 16" fill="currentColor">
                 <path
@@ -29,7 +49,7 @@
                     <ul class="dropdown-menu shadow-sm bg-white">
                         <li><a class="dropdown-item small" href="https://disenouchile.github.io/aud5v001-2-2023-1/testing/">Evaluar pictogramas</a></li>
                         <li><a class="dropdown-item small" href="https://disenouchile.github.io/aud5v001-2-2023-1/p5u2/">Usar pictogramas</a></li>
-                        <li><a class="dropdown-item small" href="https://disenouchile.github.io/aud5v001-2-2023-1/p5u3/">Comprender, desafiar y transformar v1.0</a></li>
+                        <li><a class="dropdown-item small" href="https://disenouchile.github.io/aud5v001-2-2023-1/final/">Comprender, desafiar y transformar v2.0</a></li>
                         <li><hr class="dropdown-divider" /></li>
                         <li>
                             <a class="dropdown-item small" href="https://github.com/disenoUChile/aud5v001-2-2023-1">
@@ -40,44 +60,7 @@
                 </div>
             </div>
         </nav>
-        <header>
-            <div class="container">
-                <div class="row mt-5">
-                    <div class="col-11 col-sm-10 mx-auto text-center">
-                        <img class="w-25 mx-auto my-4" src="img/grafica-00-cabecera.png" />
-                        <h2 class="fs-5"><a href="https://disenouchile.github.io/aud5v001-2-2023-1/final/" class="link-secondary link-underline-opacity-10 link-underline-opacity-50-hover">Comprender, desafiar y transformar</a></h2>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <h1>Proyecto minero Pampa Hermosa</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-11 col-sm-10 mx-auto">
-                        <address class="mb-5 text-center">
-                            <p class="fw-bold">
-                                Javiera Cerda, Carolina Rubio y Cristofer Seguel<br />
-                                <span class="small text-body-secondary">PUBLICADO EL 10 DE JULIO DE 2023</span>
-                            </p>
-                        </address>
-                        <p class="lead">Chile es el país que encabeza la lista de producción y exportación de yodo a nivel mundial. El mayor productor nacional es la empresa SQM, antes Soquimich. Empresa a cargo de diversos proyectos mineros, donde uno de
-                        sus más destacados es el de Pampa Hermosa.</p>
-                        <figure>
-                            <object data="img/grafica-landscape.svg" type="image/svg+xml" class="w-100 my-2"></object>
-                            <figcaption>
-                                <p>Gráfica no figurativa para confirmar la información del "lead". Usar datos de este gráfico: https://es.statista.com/estadisticas/635440/paises-lideres-en-la-produccion-de-yodo-a-nivel-mundial/</p>
-                            </figcaption>
-                        </figure>                        
-                    </div>
-                </div>
-            </div>
-        </header>
-        <main>
+         <main>
             <article>
                 <div class="container">
                     <div class="row">
@@ -88,7 +71,7 @@
                                 En la minería, este se extrae del caliche, una roca que suele encontrarse a orillas de salares, palabra proveniente del quechua “cachi” tiene como significado “sal”.
                             </p>
                             <figure>
-                                <img src="img/grafica-landscape.svg" class="w-100 my-2" />
+                                <img src="img/yacimiento del yodo.jpg" class="w-100 my-2" />
                                 <figcaption>
                                     <p>Gráfica figurativa (fotografía) de yacimiento de yodo</p>
                                 </figcaption>
@@ -112,51 +95,55 @@
                 <div class="container-fluid">
                     <div class="row">
                         <figure class="col-sm-6 col-md-4 col-lg-3">
-                            <img src="img/grafica-landscape.svg" class="w-100 my-2" />
+                            <img src="img/graf_usosdelyodofarmacéutica.png" class="w-100 my-2" />
                             <figcaption>
                                 <p>Primer uso</p>
                             </figcaption>
                         </figure>
                         <figure class="col-sm-6 col-md-4 col-lg-3">
-                            <img src="img/grafica-landscape.svg" class="w-100 my-2" />
+                            <img src="img/graf_usosdelyodomediosdecontrasteyrayosx.png" class="w-100 my-2" />
                             <figcaption>
                                 <p>Segundo uso</p>
                             </figcaption>
                         </figure>
                         <figure class="col-sm-6 col-md-4 col-lg-3">
-                            <img src="img/grafica-landscape.svg" class="w-100 my-2" />
+                            <img src="img/graf_usosdelyodoidóforosybiocidas.png" class="w-100 my-2" />
                             <figcaption>
                                 <p>Tercer uso</p>
                             </figcaption>
                         </figure>
                         <figure class="col-sm-6 col-md-4 col-lg-3">
-                            <img src="img/grafica-landscape.svg" class="w-100 my-2" />
+                            <img src="img/graf_usosdelyodonutriciónhumana.png" class="w-100 my-2" />
                             <figcaption>
                                 <p>Cuarto uso</p>
                             </figcaption>
                         </figure>
                         <figure class="col-sm-6 col-md-4 col-lg-3">
-                            <img src="img/grafica-landscape.svg" class="w-100 my-2" />
+                            <img src="img/graf_usosdelyodoalimentoparaanimales_.png
                             <figcaption>
                                 <p>Quinto uso</p>
                             </figcaption>
                         </figure>
                         <figure class="col-sm-6 col-md-4 col-lg-3">
-                            <img src="img/grafica-landscape.svg" class="w-100 my-2" />
+                            <img src="img/graf_usosdelyodofotografía,pantallasledylcd.png " class="w-100 my-2" />
                             <figcaption>
                                 <p>Sexto uso</p>
                             </figcaption>
                         </figure>
                         <figure class="col-sm-6 col-md-4 col-lg-3">
-                            <img src="img/grafica-landscape.svg" class="w-100 my-2" />
+                            <img src="img/graf_usosdelyodoproductosquímicos.png" class="w-100 my-2" />
                             <figcaption>
                                 <p>Séptimo uso</p>
                             </figcaption>
                         </figure>
                         <figure class="col-sm-6 col-md-4 col-lg-3">
-                            <img src="img/grafica-landscape.svg" class="w-100 my-2" />
+                            <img src="img/graf_usosdelyodoproductosorgánicos.png" class="w-100 my-2" />
                             <figcaption>
                                 <p>Octavo uso</p>
+                            </figure>
+                        <figure class="col-sm-6 col-md-4 col-lg-3">
+                            <img src="img/graf_usosdelyodoalimentoparaanimales_.png" class="w-100 my-2" />
+                            <figcaption>    
                             </figcaption>
                         </figure>
                     </div>
@@ -170,9 +157,9 @@
                             </p>
 
                             <figure>
-                                <object data="img/grafica-landscape.svg" type="image/svg+xml" class="w-100 my-2"></object>
+                                <object data="img/graf_ importacionesdeyodo_00.svg" type="image/svg+xml" class="w-100 my-2"></object>
                                 <figcaption>
-                                    <p>Gráfica no figurativa Países importadores de yodo a nivel mundial http://www.gomoodboard.com/boards/Gd-mUmkw/share</p>
+                                    <p>Gráfica no figurativa Países importadores de yodo a nivel mundial</p>
                                 </figcaption>
                             </figure>
                         </div>
@@ -186,11 +173,11 @@
                         <div class="col-11 col-sm-10 mx-auto">
                             <h3 class="fs-4 text-center my-2">Extracción de yodo en Chile</h3>
                             <p>
-                                En Norte de Chile se compone por dos climas, el desértico en la zona del Norte Grande y el semiárido en el Norte Chico. Ambos climas hacen que la zona sea propicia para la aparición de gran cantidad de
+                                En el Norte de Chile se compone por dos climas, el desértico en la zona del Norte Grande y el semiárido en el Norte Chico. Ambos climas hacen que la zona sea propicia para la aparición de gran cantidad de
                                 caliche, el cual como materia prima sirve como fuente de nitrato de sodio y yodo, dando como origen el mayor yacimiento de estos a nivel mundial.
                             </p>
                             <figure>
-                                <img src="img/grafica-portrait.svg" class="w-100 my-2" />
+                                <img src="img/graf_lineadetempopampahermosa_00.svg" class="w-100 my-2" />
                                 <figcaption>
                                     <p>
                                         Línea de tiempo creación SQM y creación de distintos proyectos (incluyendo referencia a Pampa Hermosa). Gráfica mixta. Que sea como la línea del tiempo abajo de esta infografía
@@ -217,9 +204,10 @@
                 </div>
                 <div class="container-fluid">
                     <figure>
-                        <img src="img/grafica-landscape.svg" class="w-100 my-2" />
+                        <img src="img/graf_mapadeinstalaciones_00.svg" class="w-100 my-2" />
                         <figcaption>
-                            <p>Mapa de instalaciones http://www.gomoodboard.com/boards/EmU5gpGW/share</p>
+                            <p>
+                                Mapa de instalaciones</p>
                         </figcaption>
                     </figure>
                 </div>
@@ -230,11 +218,6 @@
                                 La empresa tiene dos de las faenas de yodo más importantes de yodo a nivel Mundial, La de Valdivia donde se realizaba anteriormente salitre a partir del mismo caliche y la de Nueva Victoria. Esto ha hecho
                                 posible que puedan llegar a los 5 continentes abasteciéndolos del mineral, y de la misma forma generando gran cantidad de ganancias, puesto que la empresa se dedica a la exportación como materia prima.
                             </p>
-
-                            <figure>
-                                <img src="img/grafica-landscape.svg" class="w-100 my-2" />
-                                <figcaption>
-                                    <p>Mapa de instalaciones http://www.gomoodboard.com/boards/EmU5gpGW/share</p>
                                 </figcaption>
                             </figure>
                         </div>
@@ -252,9 +235,9 @@
                                 continua extracción de agua que se realiza, procedimientos que preocupan y alertan a personas de la zona, principalmente a las comunidades indígenas Aymaras y Quechuas.
                             </p>
                             <figure>
-                                <img src="img/grafica-landscape.svg" class="w-100 my-2" />
+                                <img src="img/salar de llamara.jpg" class="w-100 my-2" />
                                 <figcaption>
-                                    <p>Gráfica figurativa (fotografía) Salar de Llamara http://www.gomoodboard.com/boards/TjHSEpiy/</p>
+                                    <p>Gráfica figurativa (fotografía) Salar de Llamara</p>
                                 </figcaption>
                             </figure>
                             <p>
@@ -266,9 +249,9 @@
                 </div>
                 <div class="container-fluid">
                     <figure>
-                        <object data="img/grafica-square.svg" type="image/svg+xml" class="w-100 my-2"></object>
+                        <object data="img/_graf_florayfaunanativa_00.svg" type="image/svg+xml" class="w-100 my-2"></object>
                         <figcaption>
-                            <p>Gráfica Figurativa Flora y Fauna http://www.gomoodboard.com/boards/6Uie7WEe/share</p>
+                            <p>Gráfica Figurativa Flora y Fauna</p>
                         </figcaption>
                     </figure>
                 </div>
@@ -282,16 +265,16 @@
                             </p>
 
                             <figure class="col-sm-t6">
-                                <img src="img/grafica-portrait.svg" class="w-100 my-2" />
+                                <img src="img/graf_explotación agua_00.svg" class="w-100 my-2" />
                                 <figcaption>
-                                    <p>Gráfica Figurativa Efectos de extracción de yodo en personas http://www.gomoodboard.com/</p>
+                                    <p>Gráfica Figurativa Efectos de extracción de yodo en personas</p>
                                 </figcaption>
                             </figure>
 
                             <figure class="col-sm-t6">
-                                <img src="img/grafica-portrait.svg" class="w-100 my-2" />
+                                <img src="img/graf_extraccionesdeyodo_00.svg" class="w-100 my-2" />
                                 <figcaption>
-                                    <p>Gráfica Figurativa Efectos de extracción de yodo en flora y fauna http://www.gomoodboard.com/</p>
+                                    <p>Gráfica Figurativa Efectos de extracción de yodo en flora y fauna</p>
                                 </figcaption>
                             </figure>
                         </div>
@@ -320,9 +303,9 @@
                 </div>
                 <div class="container-fluid">
                     <figure>
-                        <img src="img/grafica-square.svg" class="w-100 my-2" />
+                        <img src="img/graf_casosqm_00.svg" class="w-100 my-2" />
                         <figcaption>
-                            <p>Gráfica Figurativa con las 34 personas caso SQM http://www.gomoodboard.com/boards/g74Gjmep/share.</p>
+                                    <p>Gráfica Figurativa con las 34 personas caso SQM.</p>
                         </figcaption>
                     </figure>
                 </div>
@@ -331,9 +314,9 @@
                     <div class="row">
                         <div class="col-11 col-sm-10 mx-auto">
                             <figure>
-                                <img src="img/grafica-landscape.svg" class="w-100 my-2" />
+                                <img src="img/graf_ prometidoynorealizado_00.svg" class="w-100 my-2" />
                                 <figcaption>
-                                    <p>Gráfica Figurativa Cuadro comparativo de lo que SQM prometió v/s los procesos que no realizó http://www.gomoodboard.com/boards/8nk92FqW/share</p>
+                                    <p>Gráfica Figurativa Cuadro comparativo de lo que SQM prometió v/s los procesos que no realizó</p>
                                 </figcaption>
                             </figure>
 
@@ -341,16 +324,16 @@
                             <p>El proyecto ha tenido diferentes informes y seguimientos ante irregularidades en el proceso de producción, lo cual luego del caso Soquimich ha llamado más la atención de la mirada pública.</p>
 
                             <figure>
-                                <img src="img/grafica-portrait.svg" class="w-100 my-2" />
+                                <img src="img/graf_lineadetiempoinformesdesqm_00.svg" class="w-100 my-2" />
                                 <figcaption>
                                     <p>Gráfica no figurativa Línea de tiempo de informes no regulados del proyecto Moodboard | Quickly build beautiful moodboards and easily share the results (gomoodboard.com)</p>
                                 </figcaption>
                             </figure>
 
                             <figure>
-                                <img src="img/grafica-landscape.svg" class="w-100 my-2" />
+                                <img src="img/graf_denunciasrealizadas_00.svg" class="w-100 my-2" />
                                 <figcaption>
-                                    <p>Gráfica no figurativa denuncias realizadas v/s sanciones http://www.gomoodboard.com/</p>
+                                    <p>Gráfica no figurativa denuncias realizadas v/s sanciones</p>
                                 </figcaption>
                             </figure>
 
@@ -364,74 +347,15 @@
                 </div>
             </article>
         </main>
-
-        <aside class="container">
-            <div class="row mb-5">
-                <dl class="col-11 col-sm-10 mx-auto mt-5">
-                    <dt class="mb-2">Fuentes</dt>
-
-                    <dd>
-                        Arellano, A. y Pizarro, G. (22 de junio de 2016). El historial de irregularidades del proyecto estrella de SQM en el negocio del yodo. CIPER: Centro de Investigación Periodística.
-                        <a href=" https://www.ciperchile.cl/2016/06/21/el-historial-de-irregularidades-del-proyecto-estrella-de-sqm-en-el-negocio-del-yodo/">
-                            https://www.ciperchile.cl/2016/06/21/el- historial-de-irregularidades-del-proyecto- estrella-de-sqm-en-el-negocio-del-yodo/
-                        </a>
-                    </dd>
-
-                    <dd>
-                        Coordinadora por la Defensa del Agua y la Vida. (s.f.). Expansión de Soquimich con proyecto “Pampa Hermosa” amenaza el salar de Llamara. Derecho al Agua.
-                        <a href=" https://www.derechoalagua.cl/mapa-de-conflictos/expansion-de-soquimich-con-proyecto-pampa-hermosa-amenaza-el-salar-de-llamara/">
-                            https://www.derechoalagua.cl/mapa-de- conflictos/expansion-de-soquimich-con- proyecto-pampa-hermosa-amenaza-el-salar -de-llamara/
-                        </a>
-                    </dd>
-
-                    <dd>
-                        En Estrado.(27 de octubre de 2020). Sigue adelante proyecto Pampa Hermosa de SQM: Primer Tribunal Ambiental rechaza reclamación de comunidades Aymara y Quechua.
-                        <a href=" https://enestrado.com/sigue-adelante-proyecto-pampa-hermosa-de-sqm-primer-tribunal-ambiental-rechaza-reclamacion-de-comunidades-aymara-y-quechua/">
-                            https://enestrado.com/sigue- adelante-proyecto-pampa-hermosa-de-sqm -primer-tribunal-ambiental-rechaza- reclamacion-de-comunidades-aymara-y-quechua/
-                        </a>
-                    </dd>
-
-                    <dd>
-                        Instituto Nacional de Derechos Humanos [INDH]. (21 de julio de 2018). Proyecto minero Pampa Hermosa. <a href=" https://mapaconflictos.indh.cl/#/conflicto/12428">https://mapaconflictos.indh.cl/#/conflicto /12428</a>
-                    </dd>
-
-                    <dd>
-                        Observatorio de Conflictos Mineros de América Latina [OCMAL]. (s.f.) Proyecto Pampa Hermosa.
-                        <a href=" https://mapa.conflictosmineros.net/ocmal_db-v2/proyecto/view/529">https://mapa.conflictosmineros.net/ocmal _db-v2/proyecto/view/529</a>
-                    </dd>
-
-                    <dd>
-                        Sistema Nacional de Información de Fiscalización Ambiental [SNIFA]. (2023). Catastro de Unidades Fiscalizables: Pampa Hermosa.
-                        <a href=" https://snifa.sma.gob.cl/UnidadFiscalizable/Ficha/245">https://snifa.sma.gob.cl/ UnidadFiscalizable/Ficha/245</a>
-                    </dd>
-
-                    <dd>
-                        Tribunal Ambiental Santiago de Chile. (24 de abril de 2018). Tribunal Ambiental de Santiago inspeccionó puquios del Salar de Llamara en reclamación de SQM contra Superintendencia del Medio Ambiente. Victor Cofré.
-                        (2019). Ponce Lerou/Pinochet. El litio. Las cascadas. Las platas políticas. (Primera Edición). Editorial Catalonia.
-                        <a href=" https://tribunalambiental.cl/inspeccion-salar-de-llamara-r-160-2017/">https://tribunalambiental.cl/inspeccion- salar-de-llamara-r-160-2017/</a>
-                    </dd>
-
-                    <dd>SQM S.A. (2018). SQM Soluciones para el Desarrollo Humano. Recuperado el 07 de junio de 2023. <a href="https://www.sqm.com/">https://www.sqm.com/</a></dd>
-                </dl>
-
-                <dl class="col-11 col-sm-10 mx-auto mt-2 mb-5">
-                    <dt class="mb-2">Editado por</dt>
-                    <dd>Josefa Birkelbach, Felipe Cortez y Luciana Oropesa</dd>
-                </dl>
-            </div>
-        </aside>
-
-        <footer class="bg-white shadow-sm">
-            <div class="container-fluid pt-4 pb-5">
+        <footer>
+            <div class="container-fluid border-top pt-4 pb-5">
                 <div class="row">
                     <div class="col-sm-11 mx-auto">
-                        <h4 class="fs-6 mt-4 mb-5 ps-3 text-center">Comprender, desafiar y transformar v2.0</h4>
-
+                        <h4 class="fs-6 my-4 ps-3">Más de Proyecto V</h4>
                         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4 small" id="otres"></div>
                     </div>
                 </div>
             </div>
-
             <div class="container-fluid border-top py-4">
                 <div class="row">
                     <div class="col-sm-11 mx-auto">
@@ -446,66 +370,69 @@
                 </div>
             </div>
         </footer>
-
         <script>
-            const datos = [
-                {
-                    tema: "Proyecto minero Pampa Hermosa",
-                    carpeta: "pampa-hermosa",
-                },
-                {
-                    tema: "Basural de ropa en el Desierto de Atacama",
-                    carpeta: "atacama",
-                },
-                {
-                    tema: "Mujeres y agua en San Pedro de Melipilla",
-                    carpeta: "melipilla",
-                },
-                {
-                    tema: "Parque eólico en Chiloé",
-                    carpeta: "chiloe",
-                },
-                {
-                    tema: "Planta de celulosa Licancel",
-                    carpeta: "licancel",
-                },
-                {
-                    tema: "Plomo en Arica",
-                    carpeta: "arica",
-                },
-                {
-                    tema: "Proyecto hidroeléctrico Alto Maipo",
-                    carpeta: "alto-maipo",
-                },
-                {
-                    tema: "Proyecto inmobiliario Bosque El Panul",
-                    carpeta: "el-panul",
-                },
-                {
-                    tema: "Salmoneras en la Reserva Nacional Kawésqar",
-                    carpeta: "kawesqar",
-                },
-                {
-                    tema: "Usurpación de agua en la Provincia de Petorca",
-                    carpeta: "petorca",
-                },
-            ];
+const datos = [
+    {
+        tema: "Proyecto minero Pampa Hermosa",
+        carpeta: "pampa-hermosa",
+    },
+    {
+        tema: "Basural de ropa en el Desierto de Atacama",
+        carpeta: "atacama",
+    },
+    {
+        tema: "Mujeres y agua en San Pedro de Melipilla",
+        carpeta: "melipilla",
+    },
+    {
+        tema: "Parque eólico en Chiloé",
+        carpeta: "chiloe",
+    },
+    {
+        tema: "Planta de celulosa Licancel",
+        carpeta: "licancel",
+    },
+    {
+        tema: "Plomo en Arica",
+        carpeta: "arica",
+    },
+    {
+        tema: "Proyecto hidroeléctrico Alto Maipo",
+        carpeta: "alto-maipo",
+    },
+    {
+        tema: "Proyecto inmobiliario Bosque El Panul",
+        carpeta: "el-panul",
+    },
+    {
+        tema: "Salmoneras en la Reserva Nacional Kawésqar",
+        carpeta: "kawesqar",
+    },
+    {
+        tema: "Usurpación de agua en la Provincia de Petorca",
+        carpeta: "petorca",
+    }
+];
 
-            const donde = document.querySelector("#otres");
+const donde = document.querySelector("#otres");
 
-            datos.forEach((d, i) => {
-                if (i == 0) {
-                    donde.innerHTML += '<div class="col"><div class="card h-100 bg-light shadow-sm border-0"><div class="card-body"><p class="m-0 text-body-tertiary">' + d.tema + "</p></div></div></div>";
-                } else {
-                    donde.innerHTML +=
-                        '<div class="col"><div class="card border-0 shadow-sm h-100"><div class="card-body"><p class="m-0"><a href="https://disenouchile.github.io/aud5v001-2-2023-1/final/' +
-                        d.carpeta +
-                        '" class="stretched-link link-secondary link-underline-opacity-25 link-underline-opacity-100-hover">' +
-                        d.tema +
-                        "</a></p></div></div></div>";
-                }
-            });
+datos.forEach((d, i) => {
+    if (i == 0) {
+        donde.innerHTML += '<div class="col"><div class="card h-100"><div class="card-body"><p class="m-0 text-body-tertiary">' + d.tema + "</p></div></div></div>";
+    } else {
+        donde.innerHTML +=
+            '<div class="col"><div class="card h-100"><div class="card-body"><p class="m-0"><a href="https://disenouchile.github.io/aud5v001-2-2023-1/p5u3/' +
+            d.carpeta +
+            '" class="stretched-link link-secondary link-underline-opacity-25 link-underline-opacity-100-hover">' +
+            d.tema +
+            "</a></p></div></div></div>";
+    }
+});
+        </script>
+    </body>
+
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     </body>
+
 </html>
