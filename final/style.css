@@ -21,13 +21,14 @@ footer {
     font-size: 90%;
 }
 
-dl dd {
-    padding-left: 1rem;
-    text-indent: -1rem;
-}
 dt, em, .fw-bold{
     font-style: normal;
     font-weight: 600;
+}
+
+dl dd {
+    padding-left: 1rem;
+    text-indent: -1rem;
 }
 
 figcaption p {
@@ -43,7 +44,7 @@ h2,h3,h4,h5,h6{font-weight: 600;}
 /* la línea de tiempo */
 
 .timeline {
-    height: 50vh;
+    height: 62vh;
     width: 100%;
     overflow-y: hidden;
     overflow-x: scroll;
