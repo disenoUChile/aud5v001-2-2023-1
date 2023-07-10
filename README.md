@@ -1,5 +1,9 @@
 # Proyecto V · Sección 2 · Mención en Visualidad y Medios
 
+El propósito formativo general del curso es llevar a cada estudiante a estructurar proyectos y desarrollar propuestas de diseño de complejidad media-alta, con énfasis en la morfología y la técnica, incorporando las variables propias del contexto en que se plantea la intervención y con un alto nivel de factibilidad tecnológica-productiva. 
+
+En la Sección 2, el énfasis en la morfología y la técnica estará en función del **diseño de información y el diseño visual de información**. Y las intervenciones serán planteadas **a través de medios digitales, dinámicos e interactivos**.
+
 **Estudiantes** · Michelle Astrelli · Consuelo Bahamondes · Lucía Barnier · Angela Beltrán · Martín Bustos · Ana Sofía Carrasco · Nicolás Castro · Javiera Cerda · Lucas Echeverría · Martina Flores · Emilia Gálvez · Sofía Guzmán · Aníbal Lobos · Bastián Lobos · America Merino · Antonia Morales · Janis Navarrete · Alondra Núñez · Catalina Pacheco · Angela Pizarro · Daniela Quijada · Maria-Ignacia Quiroga · Isidora Retamal · Dariel Rojas · Carolina Rubio · Josefa Rubio · Cristofer Seguel · Consuelo Valdivia · Sergio Venegas · Valentina Villagrán · Mei-Shuen Wu · Catalina Yapur · **Ayudantes** · Josefa Birkelbach · Luciana Oropesa · **Profesor** · [FACO](https://faco.cl/)
 
 ### Ejercicios en línea:
