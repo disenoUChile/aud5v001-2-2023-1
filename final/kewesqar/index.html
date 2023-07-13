@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Salmoneras en la Reserva Nacional Kawésqar</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+        <link href="../style.css" rel="stylesheet" />
+    </head>
+    <body class="bg-body-tertiary">
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="licencia" viewBox="0 0 16 16" fill="currentColor">
+                <path
+                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM5.408 5.89c-.83 0-1.318.64-1.318 1.753v.742c0 1.108.479 1.727 1.318 1.727.69 0 1.138-.435 1.187-1.05h1.147v.114c-.058 1.147-1.029 1.938-2.343 1.938-1.612 0-2.518-1.028-2.518-2.729v-.747c0-1.7.914-2.75 2.518-2.75 1.319 0 2.29.812 2.343 1.999v.11H6.595c-.049-.638-.506-1.108-1.187-1.108Zm5.404 0c-.831 0-1.319.64-1.319 1.753v.742c0 1.108.48 1.727 1.319 1.727.69 0 1.138-.435 1.186-1.05h1.147v.114c-.057 1.147-1.028 1.938-2.342 1.938-1.613 0-2.518-1.028-2.518-2.729v-.747c0-1.7.914-2.75 2.518-2.75 1.318 0 2.29.812 2.342 1.999v.11h-1.147c-.048-.638-.505-1.108-1.186-1.108Z"
+                />
+            </symbol>
+            <symbol id="github" viewBox="0 0 16 16" fill="currentColor">
+                <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                />
+            </symbol>
+        </svg>
+        <nav class="py-2 bg-white shadow-sm">
+            <div class="d-flex justify-content-around small m-0 p-0">
+                <div><a href="https://uchile.cl/" target="_blank" rel="noopener noreferrer" class="link-dark link-opacity-75 link-opacity-100-hover text-decoration-none">Universidad de Chile</a></div>
+                <div><a href="https://fau.uchile.cl/carreras/4929/diseno" target="_blank" rel="noopener noreferrer" class="link-dark link-opacity-75 link-opacity-100-hover text-decoration-none">Diseño en Visualidad y Medios</a></div>
+                <div class="dropdown">
+                    <a href="#" class="link-dark link-opacity-75 link-opacity-100-hover text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Proyecto V </a>
+                    <ul class="dropdown-menu shadow-sm bg-white">
+                        <li><a class="dropdown-item small" href="https://disenouchile.github.io/aud5v001-2-2023-1/testing/">Evaluar pictogramas</a></li>
+                        <li><a class="dropdown-item small" href="https://disenouchile.github.io/aud5v001-2-2023-1/p5u2/">Usar pictogramas</a></li>
+                        <li><a class="dropdown-item small" href="https://disenouchile.github.io/aud5v001-2-2023-1/p5u3/">Comprender, desafiar y transformar v1.0</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li>
+                            <a class="dropdown-item small" href="https://github.com/disenoUChile/aud5v001-2-2023-1">
+                                <svg class="me-1" width="1em" height="1em"><use href="#github"></use></svg> Repositorio en GitHub
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <header>
+            <div class="container">
+                <div class="row mt-5">
+                    <div class="col-11 col-sm-10 mx-auto text-center">
+                        <img class="w-25 mx-auto my-4" src="img/grafica_inicio.svg" />
+                        <h2 class="fs-5"><a href="https://disenouchile.github.io/aud5v001-2-2023-1/final/" class="link-secondary link-underline-opacity-10 link-underline-opacity-50-hover">Comprender, desafiar y transformar</a></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h1>Salmoneras en la Reserva Nacional Kawésqar</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-11 col-sm-10 mx-auto">
+                        <address class="mb-5 text-center">
+                            <p class="fw-bold">
+                                Por Consuelo Bahamondes, Daniela Quijada y Dariel Rojas<br />
+                                <span class="small text-body-secondary">PUBLICADO EL 10 DE JULIO DE 2023</span>
+                            </p>
+                        </address>
+                        <p class="lead">
+                            La industria chilena aporta un <em>25% de la producción global del salmón.</em> Con tal porcentaje, se posiciona como la segunda mayor industria productora del mundo, detrás de la industria Noruega. La actividad
+                            productiva de esta industria en Chile se concentra entre fiordos, canales e islas de la zona sur.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <article>
+                <div class="container">
+                    <div class="row">
+                        <figure class="col-6">
+                            <object data="img/world-noruega.svg" type="image/svg+xml" class="w-100 my-2"></object>
+                            <figcaption>
+                                <p>Noruega, con una costa marcada por los fiordos y canales sobre el paralelo 60° latitud norte.</p>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="col-6">
+                            <object data="img/world-chile.svg" type="image/svg+xml" class="w-100 my-2"></object>
+                            <figcaption>
+                                <p>Chile, con una costa marcada por fiordos y canales bajo el paralelo 40º latitud sur.</p>
+                            </figcaption>
+                        </figure>
+
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <p>
+                                En la década de los ‘80, la industria del salmón en Chile iba encaminada a posicionar al país como el principal exportador de este producto y aledaños al resto del mundo. Pero en aquel entonces, tanto como
+                                hoy y en creces, <em>Noruega</em> ha sido la nación competidora en el mercado, actualmente abordando sobre el 50% de exportaciones de salmón y trucha al extranjero. Ambos países aprovechan las
+                                <em>condiciones propicias para el cultivo</em> de estas especies, exóticas e invasivas para las zonas en las que se introducen.
+                            </p>
+                            <p>
+                                El salmón proveniente de Noruega se vende a un mayor precio que el chileno, lo cual puede afectar la percepción del consumidor ante la calidad de este último. En Chile, la producción de salmón se ha visto
+                                mayormente obstaculizada por las normas que se han aplicado a lo largo de los años, cuyo fin ha sido mitigar los inevitables daños que esta industria genera en el ecosistema. Aún así, es importante destacar
+                                que la industria en Noruega tampoco está absuelta de estas u otras consecuencias; el año 2021, 15,5% de los salmones producidos murieron, debido a malas prácticas que ponen en riesgo la salud de los peces, y
+                                las fuentes de alimento de estos, que lleva al producto a poseer un alto porcentaje de toxinas.
+                            </p>
+                        </div>
+
+                        <figure>
+                            <object data="img/expochilename.svg" type="image/svg+xml" class="w-100 my-2"></object>
+                            <figcaption>
+                                <p>Mapa de exportación.</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <h3 class="fs-4 text-center my-2">Producción de salmón en el Sur de Chile</h3>
+                            <p>
+                                De las concesiones salmoneras que la industria mantiene <em>al interior de áreas protegidas</em>, la gran mayoría se concentran en tres unidades:
+                                <li><em>312</em> concesiones en la Reserva Forestal Las Guaitecas.</li>
+                                <li><em>66</em> en la Reserva Nacional Kawésqar.</li>
+                                <li><em>19</em> en el Parque Nacional Alberto De Agostini.</li>
+                            </p>
+                            <p>
+                                Este masivo pronunciamiento de salmoneras en la Patagonia, entre las regiones de Magallanes, Los Lagos y Aysén, siendo esta última la región con la mayor concentración, y con mayor número de áreas protegidas,
+                                ha llevado a comunidades indígenas y organizaciones ambientalistas a alegar en contra de la industria y las diversas <em>irregularidades legales</em> que presentan.
+                            </p>
+                            <figure>
+                                <object data="img/puntosverdes.svg" type="image/svg+xml" class="w-100 my-2"></object>
+                                <figcaption>
+                                    <p>Mapa de Áreas Protegidas a lo largo de Chile.</p>
+                                </figcaption>
+                            </figure>
+                            <p>
+                                El objetivo de las <em>áreas protegidas</em> es salvaguardar la diversidad genética de las especies, asegurar la preservación y aprovechamiento sustentable de la biodiversidad del territorio nacional. Debido
+                                a esto, el hecho de que se industrialice la zona carece de sentido, destruyendo biodiversidades que no existen en ningún otro lugar salvo Chile.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <figure>
+                        <object data="img/rojoverde.svg" type="image/svg+xml" class="w-100 my-2"></object>
+                        <figcaption>
+                            <p>Mapa de áreas protegidas y salmoneras aprobadas en la zona sur de Chile.</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <h3 class="fs-4 text-center my-2">Reserva Nacional Kawésqar en el Sur de Chile</h3>
+                            <p>
+                                Si, en serio, hay <em>salmoneras en zonas protegidas</em> y una de ellas es la Reserva Nacional Kawésqar, lo cual afecta no sólo a la vida marina, pero a la vida de la comunidad Kawésqar en las cercanías y
+                                cómo viven su cultura, o en este caso cómo se les impide.
+                            </p>
+                            <figure>
+                                <object data="img/aysenpuntosrojo.svg" type="image/svg+xml" class="w-100 my-2"></object>
+                                <figcaption>
+                                    <p>Salmoneras en la región de Aysén.</p>
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img src="img/salmonerakawesqar.jpg" class="w-100 mt-3" />
+                                <figcaption>
+                                    <p>Jaulas de salmones en la Reserva Nacional Kawésqar.</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <h4 class="fs-5 text-center my-2">La cultura Kawésqar</h4>
+                            <p>La Reserva Nacional Kawésqar debe su nombre a una cultura, también conocida como alacalufe. Esta cultura comparte la Zona Sur de fiordos chilenos con los yaganes y onas (selk'man)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid px-md-5">
+                    <div class="row">
+                        <figure class="col-sm-4">
+                            <img src="img/kawesqar.jpg" class="w-100 mt-3" />
+                            <figcaption>
+                                <p>
+                                    Kawésqar.
+                                </p>
+                            </figcaption>
+                        </figure>
+                        <figure class="col-sm-4">
+                            <img src="img/yaganes.jpg" class="w-100 mt-3" />
+                            <figcaption>
+                                <p>
+                                    Yaganes.
+                                </p>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="col-sm-4">
+                            <img src="img/selknam.jpg" class="w-100 mt-3" />
+                            <figcaption>
+                                <p>
+                                    Selk'nam
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <p>"Frente al <em>etnocidio</em> practicado por los colonizadores en la Patagonia, los fueguinos resistieron mediante la huida, construcción de trincheras y el desplazamiento a través de Tierra del Fuego.</p>
+
+                            <p>
+                                En las <em>persecuciones</em>, la suerte de los selk´nam variaba de acuerdo a su edad o género. Los hombres adultos eran asesinados por encarnar la resistencia o eran separados al ser secuestrados, mientras
+                                que los niños y niñas se mantuvieron con vida y se distribuyeron a familias para servicio doméstico, y las mujeres sufren violencias específicas, en su mayoría violaciones sistemáticas y secuestros."
+                            </p>
+
+                            <p>
+                                <em>El pueblo yagán y kawésqar también sufrieron el genocidio por parte de los colonizadores</em>, aunque los selk´nam fueron los más afectados ningún pueblo patagónico quedó fuera de tan terribles sucesos.
+                            </p>
+
+                            <figure>
+                                <img src="img/mujerkawesqar.jpg" class="w-100 mt-3" />
+                                <figcaption>
+                                    <p>
+                                        Ester Edén, la última mujer hablante kawésqar.
+                                    </p>
+                                </figcaption>
+                            </figure>
+
+                            <p>
+                                En la cultura Kawésqar se sostiene la creencia de que <em>cuando alguien muere su alma va al mar</em>, y los fallecidos pueden hacerse presentes como animales que se ven o comportan de manera atípica, en el
+                                mar y los distintos canales hay zonas a las cuales los kawésqar van a pescar o recolectar cholgas y erizos, o zonas que no se pueden perturbar, ya que en ellas habitan espíritus.
+                            </p>
+                            <p>También se suman los lugares considerados tabú, donde descansan cuerpos antiguos, exterminados por los colonizadores. Dado esto, está <em>prohibido ingresar a tales sectores.</em></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <h3 class="fs-4 text-center my-2">La desaparición de lo sagrado por el beneficio comercial de las salmoneras</h3>
+                            <p>La Reserva de Kawésqar debe su nombre a una cultura, también conocida como alacalufe. Esta cultura comparte la Zona Sur de fiordos chilenos con los yaganes y onas (selk'man)</p>
+                        </div>
+
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <p>
+                                Las salmoneras aportan mucho al Producto Interno Bruto, pero aquellas ubicadas en la Reserva Nacional Kawésqar no sólo <em>perturban lugares sagrados</em> de la comunidad, sino que también
+                                <em>destruyen el ecosistema marino</em>, exterminando las especies que lo habitan y por ende impidiendo que los pueblos puedan realizar actividades importantes para ellos o traspasar sus costumbres a las
+                                nuevas generaciones.
+                            </p>
+
+                            <p>
+                                Esta industria, a pesar de todo, <em>entrega una gran cantidad de trabajo.</em> En el trimestre octubre-diciembre del año 2021, las empresas socias del Consejo del Salmón -que representan sobre el
+                                <em>51%</em> de la producción chilena-, emplearon mensualmente un promedio de <em>19.719</em> personas. Siendo un <em>62%</em> trabajadores directos y un <em>38%</em> colaboradores.
+                            </p>
+
+                            <p>
+                                Aún con estas oportunidades es imposible pasar por alto el daño que producen: El ingreso de nitrógeno inorgánico disuelto por procesos de excreción de los salmones, entre heces y pellets de alimento; desechos
+                                que residen en el fondo marino, <em>alimentando algas nocivas.</em> Estas últimas pueden ocasionar la muerte de otros organismos, contaminando otras especies y sus ecosistemas.
+                            </p>
+
+                            <p>
+                                Además, al morir estas algas en un corto período, son consumidas por <em>bacterias que gastan oxígeno en grandes cantidades</em>, provocando condiciones anaeróbicas en las aguas, inhóspitas para la
+                                proliferación normal de vida.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <figure>
+                        <object data="img/fondo.svg" type="image/svg+xml" class="w-100 my-2"></object>
+                        <figcaption>
+                            <p>
+                                Jaula de salmones y los desperdicios que matan la flora y fauna marina.
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <h3 class="fs-4 text-center my-2">La legislación a la actividad salmonera</h3>
+                            <p>
+                                El proyecto de ley del Servicio de Biodiversidad y Áreas Protegidas (SBAP).
+                            </p>
+                            <p>
+                                La ley SBAP busca completar la institucionalidad ambiental chilena establecida en la Ley 20.417 de 2010, que incluye al Ministerio del Medio Ambiente (MMA), la Superintendencia del Medio Ambiente y el
+                                Servicio de Evaluación Ambiental, con la <em>creación de un servicio público encargado de la protección de la biodiversidad.</em>
+                            </p>
+
+                            <h4 class="fs-5 text-center my-2">La legislación a la actividad salmonera</h4>
+
+                            <p>
+                                El objetivo de la Ley General de Pesca y Acuicultura, es la <em>conservación y el uso sustentable de los recursos hidrobiológicos</em>, mediante la aplicación del enfoque precautorio, de un enfoque
+                                ecosistémico en la regulación pesquera y la salvaguarda de los ecosistemas marinos en que existan esos recursos.
+                            </p>
+                            <p>
+                                A diferencia de Noruega, la ley de pesca que otorga permisos a las concesiones en Chile es mucho menos estricta, lo cual abre la puerta a un sinfín de problemas. El índice de uso de antibióticos en salmoneras
+                                ha subido: alrededor de un <em>24% de gramos por tonelada</em> de producto, entre los años 2019 y 2022, como lo señala un estudio de la CSARP. A pesar de que este exceso ha ido disminuyendo con los años,
+                                Chile aún está muy por detrás de la norma en Noruega, donde el abuso de antimicrobianos en sus salmones es considerado adecuado. La baja salud de las aguas en Chile, derivado de la misma producción
+                                desenfrenada, es la causante de que se tomen medidas más desconsideradas para prevenir las enfermedades e infecciones en los peces.
+                            </p>
+                        </div>
+
+                        <div class="col-11 col-sm-10 mx-auto">
+                            <h4 class="fs-5 text-center my-2">Fake News para mantener el beneficio comercial</h4>
+                            <p>
+                                La ley SBAP, actualmente en proceso de aprobación, recibió fuertes críticas desde el área de desarrollo de la salmonicultura. Específicamente, de trabajadores dentro del gremio que temían por la posible
+                                <em>pérdida de sus empleos</em> y principal fuente de ingresos. En realidad, cualquier ley aprobada no afectaría al sector industrial y <em>proyectos que estén en marcha y operando</em> de momento vigente,
+                                por lo que las preocupaciones que se pretendían instaurar desde el oficialismo caían bajo la categoría de Fake News. La finalidad de esto, se especula, era desviar el foco de los medios de los
+                                <em>incumplimientos a las regulaciones</em> por parte de la industria, como es el caso del sobrecultivo.
+                            </p>
+                            <p>
+                                De ser promulgada la ley, se contempla un período estimado de <em>12 años para el cierre definitivo</em> de las salmoneras activas, y el desempleo se daría producto del
+                                <em>cumplimiento del tiempo por concesión</em>, y no por despidos.
+                            </p>
+                            <figure>
+                                <div class="ratio ratio-16x9 mb-2">
+                                    <iframe
+                                    src="https://www.youtube.com/embed/pNVNYahcsGo"
+                                    title="Salmoneros se movilizan en Puerto Montt contra proyecto de Áreas Protegidas"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen
+                                ></iframe>
+                                </div>
+                                <figcaption>
+                                    <p>
+                                        Fake News: Salmoneros se movilizan en Puerto Montt contra proyecto de Áreas Protegidas.
+                                    </p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <aside class="container">
+            <div class="row mb-5">
+                <dl class="col-11 col-sm-10 mx-auto mt-5">
+                    <dt class="mb-2">Fuentes</dt>
+                    <dd>
+                        Araneda, F. (2023, mayo 29). Ley que crea el Servicio de Biodiversidad y Áreas Protegidas (SBAP): ¿De qué se trata y por qué genera críticas desde la industria salmonera? Diario y Radio Universidad Chile.
+                        <a href="https://radio.uchile.cl/2023/05/29/ley-que-crea-el-servicio-de-biodiversidad-y-areas-protegidas-sbap-de-que-se-trata-y-por-que-genera-criticas-desde-la-industria-salmonera/">
+                            https://radio.uchile.cl/2023/05/29/ley-que-crea-el-servicio-de-biodiversidad-y-areas-protegidas-sbap-de-que-se-trata-y-por-que-genera-criticas-desde-la-industria-salmonera/
+                        </a>
+                    </dd>
+                    <dd>
+                        Barrientos, C. (2022, marzo 9). 40 años de salmonicultura chilena: Una historia en constante evolución. Aqua.
+                        <a href="https://www.aqua.cl/2022/03/09/salmonicultura-chilena-una-historia-en-constante-evolucion/"> https://www.aqua.cl/2022/03/09/salmonicultura-chilena-una-historia-en-constante-evolucion/ </a>
+                    </dd>
+                    <dd>
+                        Biblioteca del Congreso Nacional. (s/f). Biblioteca del Congreso Nacional.
+                        <a href="www.bcn.cl/leychile. Recuperado el 29 de junio de 2023, de https://www.bcn.cl/leychile/navegar?idNorma=13315">
+                            www.bcn.cl/leychile. Recuperado el 29 de junio de 2023, de https://www.bcn.cl/leychile/navegar?idNorma=13315
+                        </a>
+                    </dd>
+                    <dd>
+                        Chile: 416 concesiones para salmonicultura están en áreas protegidas. (2021, marzo 17). Noticias ambientales.
+                        <a href="https://es.mongabay.com/2021/03/chile-416-concesiones-para-salmonicultura-estan-en-areas-protegidas/">
+                            https://es.mongabay.com/2021/03/chile-416-concesiones-para-salmonicultura-estan-en-areas-protegidas/
+                        </a>
+                    </dd>
+                    <dd>
+                        (S/f). Consejodelsalmon.cl. Recuperado el 29 de junio de 2023, de
+                        <a href="https://www.consejodelsalmon.cl/wp-content/uploads/2023/01/25012023-Reporte-exportaciones-2022.pdf"> https://www.consejodelsalmon.cl/wp-content/uploads/2023/01/25012023-Reporte-exportaciones-2022.pdf </a>
+                    </dd>
+                    <dd>
+                        SGarcés, J. (2022, febrero 8). Tras caída en 2021 prevén recuperación del empleo salmonicultor en Chile. Salmonexpert.
+                        <a href="https://www.salmonexpert.cl/chile-cosechas-empleo/tras-cada-en-2021-prevn-recuperacin-del-empleo-salmonicultor-en-chile/1305745">
+                            https://www.salmonexpert.cl/chile-cosechas-empleo/tras-cada-en-2021-prevn-recuperacin-del-empleo-salmonicultor-en-chile/1305745
+                        </a>
+                    </dd>
+                    <dd>
+                        Liberona, F. (2023, mayo 26). Las fake news de la industria salmonera en la discusión de la ley SBAP. Uchile.cl; Diario y Radio Universidad Chile.
+                        <a href="https://radio.uchile.cl/2023/05/26/las-fake-news-de-la-industria-salmonera-en-la-discusion-de-la-ley-sbap/">
+                            https://radio.uchile.cl/2023/05/26/las-fake-news-de-la-industria-salmonera-en-la-discusion-de-la-ley-sbap/
+                        </a>
+                    </dd>
+                    <dd>La salmonicultura en datos. (s/f). Infosalmonchile.Cl. Recuperado el 29 de junio de 2023, de <a href="https://www.infosalmonchile.cl/"> https://www.infosalmonchile.cl/ </a></dd>
+                    <dd>
+                        No más salmoneras en áreas protegidas: presentan proyecto que prohíbe concesiones en zonas de conservación. (2021, noviembre 17). El Mostrador.
+                        <a href="https://www.elmostrador.cl/destacado/2021/11/17/no-mas-salmoneras-en-areas-protegidas-presentan-proyecto-que-prohibe-concesiones-en-zonas-de-conservacion/">
+                            https://www.elmostrador.cl/destacado/2021/11/17/no-mas-salmoneras-en-areas-protegidas-presentan-proyecto-que-prohibe-concesiones-en-zonas-de-conservacion/
+                        </a>
+                    </dd>
+
+                    <dd>
+                        Nuevo Reglamento de Concesiones Marítimas - Ministerio de Defensa Nacional. (s/f). Defensa.cl."> Recuperado el 8 de junio de 2023, de
+                        <a href="https://www.defensa.cl/tramites/asuntos-maritimos/nuevo-reglamento-de-concesiones-maritimas/">https://www.defensa.cl/tramites/asuntos-maritimos/nuevo-reglamento-de-concesiones-maritimas/</a>
+                    </dd>
+                    <dd>
+                        Principales datos de la industria. (2022, abril 22). Consejo del Salmón.
+                        <a href="https://www.consejodelsalmon.cl/informacion-de-la-industria/principales-datos-de-la-industria/"> https://www.consejodelsalmon.cl/informacion-de-la-industria/principales-datos-de-la-industria/</a>
+                    </dd>
+                    <dd>
+                        Salmonicultura en áreas protegidas: ¿Qué bonita vecindad? (s/f). Ladera Sur. Recuperado el 8 de junio de 2023, de
+                        <a href="https://laderasur.com/articulo/salmonicultura-en-areas-protegidas-que-bonita-vecindad/"> https://laderasur.com/articulo/salmonicultura-en-areas-protegidas-que-bonita-vecindad/</a>
+                    </dd>
+                    <dd>
+                        Salmoneras en Áreas Protegidas: 34 Concesiones operan a pesar de incurrir en causal de caducidad. (s/f). Ladera Sur. Recuperado el 8 de junio de 2023, de
+                        <a href="https://laderasur.com/articulo/salmoneras-en-areas-protegidas-34-concesiones-operan-a-pesar-de-incurrir-en-causal-de-caducidad/">
+                            https://laderasur.com/articulo/salmoneras-en-areas-protegidas-34-concesiones-operan-a-pesar-de-incurrir-en-causal-de-caducidad/
+                        </a>
+                    </dd>
+                    <dd>
+                        Salmoneras en Chile: la defensa de la Reserva Nacional Kawésqar. (2020, julio 22). Noticias ambientales.
+                        <a href="https://es.mongabay.com/2020/07/salmoneras-en-chile-la-defensa-de-la-reserva-nacional-kawesqar/"> https://es.mongabay.com/2020/07/salmoneras-en-chile-la-defensa-de-la-reserva-nacional-kawesqar/</a>
+                    </dd>
+                </dl>
+
+                <dl class="col-11 col-sm-10 mx-auto mt-2 mb-5">
+                    <dt class="mb-2">Editado por</dt>
+
+                    <dd>Josefa Birkelbach, Felipe Cortez y Luciana Oropesa</dd>
+                </dl>
+            </div>
+        </aside>
+
+        <footer class="bg-white shadow-sm">
+            <div class="container-fluid pt-4 pb-5">
+                <div class="row">
+                    <div class="col-sm-11 mx-auto">
+                        <h4 class="fs-6 mt-4 mb-5 ps-3 text-center">Comprender, desafiar y transformar v2.0</h4>
+
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4 small" id="otres"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid border-top py-4">
+                <div class="row">
+                    <div class="col-sm-11 mx-auto">
+                        <p class="px-3 d-flex justify-content-between align-items-center">
+                            <span>Primer Semestre, 2023</span>
+                            <span>
+                                <svg class="me-2" width="1em" height="1em"><use href="#licencia"></use></svg>
+                                <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" class="link-dark">Atribución-NoComercial-CompartirIgual 4.0 Internacional</a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            const datos = [
+                {
+                    tema: "Salmoneras en la Reserva Nacional Kawésqar",
+                    carpeta: "kawesqar",
+                },
+
+                {
+                    tema: "Basural de ropa en el Desierto de Atacama",
+                    carpeta: "atacama",
+                },
+                {
+                    tema: "Mujeres y agua en San Pedro de Melipilla",
+                    carpeta: "melipilla",
+                },
+                {
+                    tema: "Parque eólico en Chiloé",
+                    carpeta: "chiloe",
+                },
+                {
+                    tema: "Planta de celulosa Licancel",
+                    carpeta: "licancel",
+                },
+                {
+                    tema: "Plomo en Arica",
+                    carpeta: "arica",
+                },
+                {
+                    tema: "Proyecto hidroeléctrico Alto Maipo",
+                    carpeta: "alto-maipo",
+                },
+                {
+                    tema: "Proyecto inmobiliario Bosque El Panul",
+                    carpeta: "el-panul",
+                },
+                {
+                    tema: "Proyecto minero Pampa Hermosa",
+                    carpeta: "pampa-hermosa",
+                },
+                {
+                    tema: "Usurpación de agua en la Provincia de Petorca",
+                    carpeta: "petorca",
+                },
+            ];
+
+            const donde = document.querySelector("#otres");
+
+            datos.forEach((d, i) => {
+                if (i == 0) {
+                    donde.innerHTML += '<div class="col"><div class="card h-100 bg-light shadow-sm border-0"><div class="card-body"><p class="m-0 text-body-tertiary">' + d.tema + "</p></div></div></div>";
+                } else {
+                    donde.innerHTML +=
+                        '<div class="col"><div class="card border-0 shadow-sm h-100"><div class="card-body"><p class="m-0"><a href="https://disenouchile.github.io/aud5v001-2-2023-1/final/' +
+                        d.carpeta +
+                        '" class="stretched-link link-secondary link-underline-opacity-25 link-underline-opacity-100-hover">' +
+                        d.tema +
+                        "</a></p></div></div></div>";
+                }
+            });
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    </body>
+</html>

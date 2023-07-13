@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 998.89 599.33">
+    <defs>
+        <style>
+            .b {
+                font-size: 10px;
+            }
+            .b,
+            .c {
+                font-family: ArialMT, Arial;
+            }
+            .d {
+                fill: #fff;
+            }
+            .e {
+                font-family: ArialNarrow-Bold, Arial;
+                font-size: 30px;
+            }
+            .c {
+                font-size: 12px;
+            }
+            .f {
+                letter-spacing: -0.11em;
+            }
+            .g {
+                letter-spacing: -0.04em;
+            }
+            .h {
+                letter-spacing: -0.06em;
+            }
+        </style>
+    </defs>
+    <image xlink:href="fauna_chiloe_d.jpg" />
+    <text class="b" transform="translate(912.91 57.7)">
+        <tspan x="0" y="0">Pingüino de</tspan>
+        <tspan x="5.01" y="12">Humboldt</tspan>
+    </text>
+    <text class="b" transform="translate(726.67 101.51)"><tspan x="0" y="0">Bailarín</tspan></text>
+    <text class="b" transform="translate(621.06 37.25)">
+        <tspan class="g" x="0" y="0">T</tspan>
+        <tspan x="5.74" y="0">raro</tspan>
+    </text>
+    <text class="b" transform="translate(542.64 142.95)"><tspan x="0" y="0">Pitio</tspan></text>
+    <text class="b" transform="translate(652.53 253.96)">
+        <tspan x="0" y="0">Pilpilén</tspan>
+        <tspan x=".56" y="12">Austral</tspan>
+    </text>
+    <text class="b" transform="translate(924.56 304.85)"><tspan x="0" y="0">Delfín Chileno</tspan></text>
+    <text class="b" transform="translate(446.45 314.16)">
+        <tspan x="0" y="0">Garza</tspan>
+        <tspan x="1.94" y="12">Cuca</tspan>
+    </text>
+    <text class="b" transform="translate(270.74 256.96)">
+        <tspan x="0" y="0">Loro</tspan>
+        <tspan x="-6.11" y="12">Choroy</tspan>
+    </text>
+    <text class="b" transform="translate(295.52 134.07)">
+        <tspan class="f" x="0" y="0">T</tspan>
+        <tspan x="5" y="0">ordo</tspan>
+    </text>
+    <text class="b" transform="translate(119.2 342.95)">
+        <tspan x="0" y="0">Zarapito</tspan>
+        <tspan x="-5.83" y="12">Pico Recto</tspan>
+    </text>
+    <text class="b" transform="translate(176.56 160.59)"><tspan x="0" y="0">Cernicalo</tspan></text>
+    <text class="b" transform="translate(158.67 61.71)"><tspan x="0" y="0">Picaflor</tspan></text>
+    <text class="b" transform="translate(361.09 48.39)"><tspan x="0" y="0">Chucao</tspan></text>
+    <text class="b" transform="translate(61.79 550.59)">
+        <tspan x="0" y="0">Ballena</tspan>
+        <tspan class="h" x="33.36" y="0"></tspan>
+        <tspan x="35.59" y="0">Azul</tspan>
+    </text>
+    <rect class="d" x="597.7" y="452.44" width="197.51" height="87.05" transform="translate(-120 242.13) rotate(-18.19)" />
+    <text class="b" transform="translate(642.11 484.99)">
+        <tspan x="0" y="0">(La relación de tamaño no</tspan>
+        <tspan x="0" y="13">representa una escala real)</tspan>
+    </text>
+</svg>
