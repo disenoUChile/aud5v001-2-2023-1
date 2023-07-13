@@ -5,70 +5,96 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Plomo en Arica</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
-        <link href="../style.css" rel="stylesheet" />
+        <style>
+            @media (min-width: 768px) {
+                .container {
+                    max-width: 720px;
+                }
+            }
+
+            aside,
+            footer {
+                font-size: 90%;
+            }
+
+            dl dd {
+                padding-left: 1rem;
+                text-indent: -1rem;
+            }
+            em {
+                font-style: normal;
+                font-weight: bold;
+            }
+
+            figcaption p {
+                font-size: 80%;
+                color: gray;
+                text-align: center;
+            }
+            /* la línea de tiempo */
+            #timeline {
+                height: 50vh;
+                width: 100%;
+                overflow-y: hidden;
+                overflow-x: scroll;
+            }
+            #timeline::-webkit-scrollbar {
+                height: 0.5rem;
+            }
+
+            #timeline::-webkit-scrollbar-track {
+                background: #eee;
+            }
+
+            #timeline::-webkit-scrollbar-thumb {
+                background: #ddd;
+            }
+
+            #timeline::-webkit-scrollbar-thumb:hover {
+                background: #ccc;
+            }
+        </style>
     </head>
-    <body class="bg-body-tertiary">
+    <body>
         <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
             <symbol id="licencia" viewBox="0 0 16 16" fill="currentColor">
                 <path
                     d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM5.408 5.89c-.83 0-1.318.64-1.318 1.753v.742c0 1.108.479 1.727 1.318 1.727.69 0 1.138-.435 1.187-1.05h1.147v.114c-.058 1.147-1.029 1.938-2.343 1.938-1.612 0-2.518-1.028-2.518-2.729v-.747c0-1.7.914-2.75 2.518-2.75 1.319 0 2.29.812 2.343 1.999v.11H6.595c-.049-.638-.506-1.108-1.187-1.108Zm5.404 0c-.831 0-1.319.64-1.319 1.753v.742c0 1.108.48 1.727 1.319 1.727.69 0 1.138-.435 1.186-1.05h1.147v.114c-.057 1.147-1.028 1.938-2.342 1.938-1.613 0-2.518-1.028-2.518-2.729v-.747c0-1.7.914-2.75 2.518-2.75 1.318 0 2.29.812 2.342 1.999v.11h-1.147c-.048-.638-.505-1.108-1.186-1.108Z"
                 />
             </symbol>
-            <symbol id="github" viewBox="0 0 16 16" fill="currentColor">
-                <path
-                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
-                />
-            </symbol>
         </svg>
-        <nav class="py-2 bg-white shadow-sm">
-            <div class="d-flex justify-content-around small m-0 p-0">
-                <div><a href="https://uchile.cl/" target="_blank" rel="noopener noreferrer" class="link-dark link-opacity-75 link-opacity-100-hover text-decoration-none">Universidad de Chile</a></div>
-                <div><a href="https://fau.uchile.cl/carreras/4929/diseno" target="_blank" rel="noopener noreferrer" class="link-dark link-opacity-75 link-opacity-100-hover text-decoration-none">Diseño en Visualidad y Medios</a></div>
-                <div class="dropdown">
-                    <a href="#" class="link-dark link-opacity-75 link-opacity-100-hover text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Proyecto V </a>
-                    <ul class="dropdown-menu shadow-sm bg-white">
-                        <li><a class="dropdown-item small" href="https://disenouchile.github.io/aud5v001-2-2023-1/testing/">Evaluar pictogramas</a></li>
-                        <li><a class="dropdown-item small" href="https://disenouchile.github.io/aud5v001-2-2023-1/p5u2/">Usar pictogramas</a></li>
-                        <li><a class="dropdown-item small" href="https://disenouchile.github.io/aud5v001-2-2023-1/p5u3/">Comprender, desafiar y transformar v1.0</a></li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li>
-                            <a class="dropdown-item small" href="https://github.com/disenoUChile/aud5v001-2-2023-1">
-                                <svg class="me-1" width="1em" height="1em"><use href="#github"></use></svg> Repositorio en GitHub
-                            </a>
-                        </li>
-                    </ul>
+        <nav class="pt-3 shadow-sm">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <p class="d-flex justify-content-around small fw-bold">
+                            <a href="https://uchile.cl/" target="_blank" rel="noopener noreferrer" class="link-dark link-opacity-25 link-opacity-50-hover text-decoration-none">Universidad de Chile</a>
+                            <a href="https://fau.uchile.cl/carreras/4929/diseno" target="_blank" rel="noopener noreferrer" class="link-dark link-opacity-25 link-opacity-50-hover text-decoration-none">Diseño en Visualidad y Medios</a>
+                            <a href="https://github.com/disenouchile/aud5v001-2-2023-1/" target="_blank" rel="noopener noreferrer" class="link-dark link-opacity-25 link-opacity-50-hover text-decoration-none">Proyecto V</a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </nav>
-        <header>
-            <div class="container">
-                <div class="row mt-5">
-                    <div class="col-11 col-sm-10 mx-auto text-center">
+
+        <header class="container">
+            <div class="row mt-3">
+                <div class="col-11 col-sm-10 mx-auto">
+                    <div class="text-center">
                         <img class="w-25 mx-auto my-4" src="img/icono-1.jpg" />
-                        <h2 class="fs-5"><a href="https://disenouchile.github.io/aud5v001-2-2023-1/final/" class="link-secondary link-underline-opacity-10 link-underline-opacity-50-hover">Comprender, desafiar y transformar</a></h2>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12 text-center">
+                        <h2 class="fs-5"><a href="https://disenouchile.github.io/aud5v001-2-2023-1/p5u3/" class="link-secondary link-underline-opacity-10 link-underline-opacity-50-hover">Comprender, desafiar y transformar</a></h2>
                         <h1>Plomo en Arica</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-11 col-sm-10 mx-auto">
-                        <address class="mb-5 text-center">
+                        <address class="mb-5">
                             <p class="fw-bold">
                                 Por Lucía Barnier, Angela Pizarro y Martina Flores<br />
-                                <span class="small text-body-secondary">PUBLICADO EL 10 DE JULIO DE 2023</span>
+                                <span class="small text-body-secondary">PUBLICADO EL 6 DE JULIO DE 2023</span>
                             </p>
                         </address>
-                        <p class="lead">
-                            Entre 1984 y 1985, la compañía chilena Promel Ltda. recibió en Arica cerca de 20.000 toneladas de residuos de la empresa sueca Boiden Mineal AB. Los residuos fueron depositados cerca del Cerro Chuño. Años más tarde, cuando el crecimiento de la ciudad ya había alcanzado ese cerro, se descubrió que tales desecho eran altamente tóxicos.
-                        </p>
                     </div>
+                    <p class="lead">
+                        Entre 1984 y 1985, la compañía chilena Promel Ltda. recibió en Arica cerca de 20.000 toneladas de residuos de la empresa sueca Boliden Mineal AB. Los residuos fueron depositados cerca del Cerro Chuño. Años más tarde,
+                        cuando el crecimiento de la ciudad ya había alcanzado ese cerro, se descubrió que tales desecho eran altamente tóxicos.
+                    </p>
                 </div>
             </div>
         </header>
@@ -78,16 +104,18 @@
                     <div class="row">
                         <div class="col-11 col-sm-10 mx-auto">
                             <p>
-                                En un documento fechado el 21 de marzo de 1984, en Dictadura Cívico-Militar, MARCOS BEOVIC VRANICIC, en representación legal del Promel, le solicita al SR. DIRECTOR DEL SERVICIO NACIONAL DE SALUD la autorización para desembarcar apenas 48 kilos barros con contenido metálico que <b>"no es tóxico, no se puede ingerir y cualquier persona puede manipularlo"</b>.
+                                En un documento fechado el 21 de marzo de 1984, en Dictadura Cívico-Militar, MARCOS BEOVIC VRANICIC, en representación legal del Promel, le solicita al SR. DIRECTOR DEL SERVICIO NACIONAL DE SALUD la
+                                autorización para desembarcar apenas 48 kilos barros con contenido metálico que <b>"no es tóxico, no se puede ingerir y cualquier persona puede manipularlo"</b>.
                             </p>
                             <figure>
-                                <img src="https://lavozdelosquesobran.cl/wp-content/uploads/2021/05/Documento-desembarco-firmado-por-Marcus-Beovic-691x1024.jpg" class="w-100 my-2" />
+                                <img src="img/documento-promel.jpg" type="image/svg+xml" class="w-100 my-2" />
                                 <figcaption>
                                     <p>Documento en el que Promel solicita autorización para desembarcar el contenido metálico.</p>
                                 </figcaption>
                             </figure>
                             <p>
-                                Pero fueron muchos más de 48 kilos. Fueron <b>20 mil las toneladas de desechos</b> que la sueca Boliden trasladó en 14 envíos a nuestro país. Desechos que sí eran tóxicos, debido a <b>altas concentraciones de arsénico, mercurio, cadmio y plomo</b>.
+                                Pero fueron muchos más de 48 kilos. Fueron <b>20 mil las toneladas de desechos</b> que la sueca Boliden trasladó en 14 envíos a nuestro país. Desechos que sí eran tóxicos, debido a
+                                <b>altas concentraciones de arsénico, mercurio, cadmio y plomo</b>.
                             </p>
                             <figure>
                                 <object data="img/desechos.svg" type="image/svg+xml" class="w-100 my-2"></object>
@@ -108,80 +136,38 @@
                         </div>
                     </div>
                 </div>
-
-                    <figure class="mb-4">
-                        <div id="carouselmapa" class="carousel slide carousel-fade mb-3">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselmapa" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselmapa" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselmapa" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <!--mapa 2003 cerro chuño-->
-    <div class="carousel-item active">
-      <object data="img/2003.svg" class="d-block w-100" alt="..."></object>
-      <div class="carousel-caption d-none d-md-block">
-            <p class="m-0">Zonas afectadas por los desechos tóxicos en 2003</p>
-       </div>
-    </div>
-    <!--mapa 2012 cerro chuño -->
-    <div class="carousel-item">
-      <object data="img/2012.svg" class="d-block w-100" alt="..."></object>
-      <div class="carousel-caption d-none d-md-block">
-            <p class="m-0">Zonas afectadas por los desechos tóxicos en 2012</p>
-       </div>
-    </div>
-    <!--mapa 2023 cerro chuño -->
-    <div class="carousel-item">
-      <object data="img/2023.svg" class="d-block w-100" alt="..."></object>
-      <div class="carousel-caption d-none d-md-block">
-            <p class="m-0">Zonas afectadas por los desechos tóxicos en 2023</p>
-       </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselmapa" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselmapa" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-                        <figcaption>
-                            <p>Mapa satelital de Cerro Chuño, Los Industriales y el sector de desechos tóxicos entre 2003 y 2023. Elaboración propia, sobre Google Earth.</p>
-                        </figcaption>
-                    </figure>
-                
-
+                <figure>
+                    <img src="img/mapa-1.png" type="image/svg+xml" class="w-100 my-2" />
+                    <figcaption>
+                        <p>Documento en el que Promel solicita autorización para desembarcar el contenido metálico.</p>
+                    </figcaption>
+                </figure>
 
                 <div class="container">
                     <div class="row">
                         <div class="col-11 col-sm-10 mx-auto">
-                            
-                            <p>El lugar donde se encuentran los residuos es, hoy en día, el patio trasero de la periferia de Arica, donde, tal como en todo el país, se levantan las viviendas sociales. Viviendas donde <b>se convive con el cáncer</b>, <b>los abortos espontáneos</b> y <b>los defectos de nacimiento</b> que se pueden vincular con la exposición a los desechos tóxicos.</p>
+                            <p>
+                                El lugar donde se encuentran los residuos es, hoy en día, el patio trasero de la periferia de Arica, donde, tal como en todo el país, se levantan las viviendas sociales. Viviendas donde
+                                <b>se convive con el cáncer</b>, <b>los abortos espontáneos</b> y <b>los defectos de nacimiento</b> que se pueden vincular con la exposición a los desechos tóxicos.
+                            </p>
                         </div>
 
+                        <figure class="col-sm-6">
+                            <img src="img/foto-de-foto.jpg" type="image/svg+xml" class="w-100 my-2" />
+                            <figcaption>
+                                <p>Foto de la foto que se ve en 2:06 de https://www.youtube.com/watch?v=mD8zEU8hFl0</p>
+                            </figcaption>
+                        </figure>
 
-                            <figure class="col-sm-6">
-                                <img src="img/foto-de-foto.jpg" type="image/svg+xml" class="w-100 my-2">
-                                <figcaption>
-                                    <p>Foto de la foto que se ve en 2:06 de https://www.youtube.com/watch?v=mD8zEU8hFl0</p>
-                                </figcaption>
-                            </figure>
-                            
-                            <figure class="col-sm-6">
-                                <img src="img/persona-enferma.jpg" type="image/svg+xml" class="w-100 my-2">
-                                <figcaption>
-                                    <p>Persona enferma debido a los desechos tóxicos. https://lavozdelosquesobran.cl/wp-content/uploads/2021/05/Captura-persona-enferma.jpg</p>
-                                </figcaption>
-                            </figure>
-                            
-                            </div>
-                        </div>
-                    </article>
-
-  
+                        <figure class="col-sm-6">
+                            <img src="img/persona-enferma.jpg" type="image/svg+xml" class="w-100 my-2" />
+                            <figcaption>
+                                <p>Persona enferma debido a los desechos tóxicos. https://lavozdelosquesobran.cl/wp-content/uploads/2021/05/Captura-persona-enferma.jpg</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </article>
 
             <article>
                 <div class="container">
@@ -189,22 +175,21 @@
                         <div class="col-11 col-sm-10 mx-auto">
                             <h3 class="fs-4 text-center my-2">Enfermedades y repercusiones a largo plazo</h3>
 
-
                             <p>Los habitantes del sector afectado presentaban diversas enfermedades como:</p>
-                    <ul>
-                        <li><b>Fibromialgia</b></li>
-                        <li><b>Leucemia</b></li>
-                        <li><b>Fibrosis pulmonar</b></li>
-                        <li><b>Hemorragias</b></li>
-                    </ul>
-                             <p>Además, siguen experimentando síntomas como:</p> 
-                    <ul>
-                        <li><b>Dolores en las articulaciones y huesos</b></li>
-                        <li><b>Tos crónica</b></li>
-                        <li><b>Dificultades respiratorias</b></li>
-                        <li><b>Pérdida de memoria</b></li>
-                        <li><b>Cansancio</b></li>
-                    </ul>
+                            <ul>
+                                <li><b>Fibromialgia</b></li>
+                                <li><b>Leucemia</b></li>
+                                <li><b>Fibrosis pulmonar</b></li>
+                                <li><b>Hemorragias</b></li>
+                            </ul>
+                            <p>Además, siguen experimentando síntomas como:</p>
+                            <ul>
+                                <li><b>Dolores en las articulaciones y huesos</b></li>
+                                <li><b>Tos crónica</b></li>
+                                <li><b>Dificultades respiratorias</b></li>
+                                <li><b>Pérdida de memoria</b></li>
+                                <li><b>Cansancio</b></li>
+                            </ul>
                             <p>Los niños recién nacidos también sufren de problemas de salud como hidrocefalia, espina bífida y mal de Chiari.</p>
 
                             <figure>
@@ -221,14 +206,12 @@
                                 </figcaption>
                             </figure>
 
-
                             <figure>
                                 <object data="img/mercurio.svg" type="image/svg+xml" class="w-100 my-2"></object>
                                 <figcaption>
                                     <p>Efectos en el cuerpo por la exposición de mercurio.</p>
                                 </figcaption>
                             </figure>
-
 
                             <figure>
                                 <object data="img/cadmio.svg" type="image/svg+xml" class="w-100 my-2"></object>
@@ -241,14 +224,17 @@
                 </div>
             </article>
 
-
             <article>
                 <div class="container">
                     <div class="row">
                         <div class="col-11 col-sm-10 mx-auto">
                             <h3 class="fs-4 text-center my-2">
-                                Muertos por plomo, arsénico, mercurio y cadmio en Arica</h3>
-                                <p>Varias de <b>las personas afectadas han ido fallecido</b>, principalmente de distintos tipos de cáncer, por ejemplo <b>cáncer a la piel</b>, <b>a los pulmones</b>, <b>a la sangre</b>, y algunos casos se complican aún más antes de llevar a la muerte como un cáncer al útero con falla multisistémica o al pulmón con metástasis cerebral, por decir algunos.</p>
+                                Muertos por plomo, arsénico, mercurio y cadmio en Arica
+                            </h3>
+                            <p>
+                                Varias de <b>las personas afectadas han ido fallecido</b>, principalmente de distintos tipos de cáncer, por ejemplo <b>cáncer a la piel</b>, <b>a los pulmones</b>, <b>a la sangre</b>, y algunos casos se
+                                complican aún más antes de llevar a la muerte como un cáncer al útero con falla multisistémica o al pulmón con metástasis cerebral, por decir algunos.
+                            </p>
                             <figure>
                                 <object data="img/muertes.svg" type="image/svg+xml" class="w-100 my-2"></object>
                                 <figcaption>
@@ -260,63 +246,67 @@
                 </div>
             </article>
 
-
             <article>
                 <div class="container">
                     <div class="row">
                         <div class="col-11 col-sm-10 mx-auto">
                             <h3 class="fs-4 text-center my-2">La historia más reciente</h3>
-                                <p>Esta situación no fue pasada por alto por los habitantes de Cerro Chuño, los cuales <b>después de años de ser afectados</b> por los metales pesados <b>deciden tomar acciones legales</b> ante Promel y Boliden.</p>
+                            <p>
+                                Esta situación no fue pasada por alto por los habitantes de Cerro Chuño, los cuales <b>después de años de ser afectados</b> por los metales pesados <b>deciden tomar acciones legales</b> ante Promel y Boliden.
+                            </p>
                             <figure>
                                 <object data="img/linea-judicial.svg" type="image/svg+xml" class="w-100 my-2"></object>
                                 <figcaption>
                                     <p>Línea de tiempo en la que se presentan procesos judiciales, procesos legislativos, y la publicación de reportajes en Chilevisión, El País y La Voz de los que sobran.</p>
                                 </figcaption>
                             </figure>
-                            <p>Al día de hoy los habitantes de cerro chuño siguen viviendo las consecuencias causadas por una serie de negligencias. <b>Sin respuestas satisfactorias, el problema seguirá existiendo</b>. En todas las personas que una vez habitaron, las que siguen habitando y las que están llegando.</p>
+                            <p>
+                                Al día de hoy los habitantes de cerro chuño siguen viviendo las consecuencias causadas por una serie de negligencias. <b>Sin respuestas satisfactorias, el problema seguirá existiendo</b>. En todas las
+                                personas que una vez habitaron, las que siguen habitando y las que están llegando.
+                            </p>
                         </div>
                     </div>
                 </div>
             </article>
-
-
-
-          </main>
+        </main>
 
         <aside class="container">
             <div class="row mb-5">
                 <dl class="col-11 col-sm-10 mx-auto mt-5">
                     <dt class="mb-2">Fuentes</dt>
 
-                    <dd>BBC News Mundo. (2022, 12 febrero). Arica: el escándalo por los desechos tóxicos que enfermaron a una comunidad | Documental [Vídeo]. YouTube. https://www.youtube.com/watch?v=sQZPzT61tKY
-Indh. (s. f.). Conflictos mediosambientales INDH. https://mapaconflictos.indh.cl/#/conflicto/6
-</dd>
-                    <dd>World Health Organization: WHO. (2022). Intoxicación por plomo y salud. www.who.int. https://www.who.int/es/news-room/fact-sheets/detail/lead-poisoning-and-health
+                    <dd>CHV Noticias. (2021, May 25). Vecinos sufren los estragos por vertedero de tóxicos cerca de poblaciones en Arica [Video]. YouTube. https://www.youtube.com/watch?v=vR_NvskCmZM</dd>
 
-</dd>
-                    <dd>Montenegro, S. (2015). Comentarios sobre jurisprudencia en materia de tribunales superiores de justicia: caso "contaminación por plomo en Arica". Revista De Derecho Ambiental, 3(3), Pág. 185–201. Recuperado a partir de https://revistaderechoambiental.uchile.cl/index.php/RDA/article/view/36507
-</dd>
-                    <dd>CEPS -Centro de Epidemiología y Políticas de Salud. UDD Chile. (2016, 25 agosto). Contacto, polimetales Arica [Vídeo]. YouTube. https://www.youtube.com/watch?v=uNGUzUwpQTo
-</dd>
-                    <dd>T13. (2021, 19 febrero). Cerro chuño de Arica: Vivir y morir en zona contaminada - #ReportajesT13 [Vídeo]. YouTube. https://www.youtube.com/watch?v=EJKARfsCmgw
-</dd>
-                    <dd>Universidad de los lagos. (2012). El conflicto por polimetales en Arica.: El conflicto por polimetales en Arica. Movilización social, desarticulación local e intervención centralizada. (De E. Arriagada O; Primera edición). Gonzalo Delamaza. Nuria Cunill Grau. Alfredo Joignant.
-</dd>
+                    <dd>World Health Organization: WHO. (2022). Intoxicación por plomo y salud. www.who.int. https://www.who.int/es/news-room/fact-sheets/detail/lead-poisoning-and-health</dd>
+                    <dd>
+                        Montenegro, S. (2015). Comentarios sobre jurisprudencia en materia de tribunales superiores de justicia: caso "contaminación por plomo en Arica". Revista De Derecho Ambiental, 3(3), Pág. 185–201. Recuperado a partir
+                        de https://revistaderechoambiental.uchile.cl/index.php/RDA/article/view/36507
+                    </dd>
+                    <dd>CEPS -Centro de Epidemiología y Políticas de Salud. UDD Chile. (2016, 25 agosto). Contacto, polimetales Arica [Vídeo]. YouTube. https://www.youtube.com/watch?v=uNGUzUwpQTo</dd>
+                    <dd>
+                        Yáñez, D. L. (2021, May 30). Promel: ¿Quiénes son los empresarios locales que trajeron a Arica los mortales desechos tóxicos suecos? - La Voz De Los Que Sobran. La Voz De Los Que Sobran.
+                        https://lavozdelosquesobran.cl/portada/promel-quienes-son-los-empresarios-locales-que-trajeron-a-arica-los-mortales-desechos-toxicos-suecos/29052021
+                    </dd>
+                    <dd>
+                        Universidad de los lagos. (2012). El conflicto por polimetales en Arica.: El conflicto por polimetales en Arica. Movilización social, desarticulación local e intervención centralizada. (De E. Arriagada O; Primera
+                        edición). Gonzalo Delamaza. Nuria Cunill Grau. Alfredo Joignant.
+                    </dd>
+                    <dd>Saez, R. (2023, March 1). Vivir y morir entre desechos tóxicos [Video]. El País Chile. https://elpais.com/chile/2023-03-01/las-20000-toneladas-de-desechos-toxicos-abandonadas-en-chile.html</dd>
                 </dl>
 
                 <dl class="col-11 col-sm-10 mx-auto mt-2 mb-5">
                     <dt class="mb-2">Editado por</dt>
 
-                    <dd>Josefa Birkelbach, Felipe Cortez y Luciana Oropesa</dd>
+                    <dd>Josefa Birkelbach y Luciana Oropesa</dd>
                 </dl>
             </div>
         </aside>
 
-        <footer class="bg-white shadow-sm">
+        <footer class="bg-light border-top">
             <div class="container-fluid pt-4 pb-5">
                 <div class="row">
                     <div class="col-sm-11 mx-auto">
-                        <h4 class="fs-6 mt-4 mb-5 ps-3 text-center">Comprender, desafiar y transformar v2.0</h4>
+                        <h4 class="fs-6 my-4 ps-3 text-center">Más de Proyecto V</h4>
 
                         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4 small" id="otres"></div>
                     </div>
@@ -386,10 +376,10 @@ Indh. (s. f.). Conflictos mediosambientales INDH. https://mapaconflictos.indh.cl
 
             datos.forEach((d, i) => {
                 if (i == 0) {
-                    donde.innerHTML += '<div class="col"><div class="card h-100 bg-light shadow-sm border-0"><div class="card-body"><p class="m-0 text-body-tertiary">' + d.tema + "</p></div></div></div>";
+                    donde.innerHTML += '<div class="col"><div class="card h-100"><div class="card-body"><p class="m-0 text-body-tertiary">' + d.tema + "</p></div></div></div>";
                 } else {
                     donde.innerHTML +=
-                        '<div class="col"><div class="card border-0 shadow-sm h-100"><div class="card-body"><p class="m-0"><a href="https://disenouchile.github.io/aud5v001-2-2023-1/final/' +
+                        '<div class="col"><div class="card h-100"><div class="card-body"><p class="m-0"><a href="https://disenouchile.github.io/aud5v001-2-2023-1/p5u3/' +
                         d.carpeta +
                         '" class="stretched-link link-secondary link-underline-opacity-25 link-underline-opacity-100-hover">' +
                         d.tema +

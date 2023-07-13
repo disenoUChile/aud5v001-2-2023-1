@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1925 756">
+    <defs>
+        <style>
+            .a {
+                font-size: 12px;
+                fill: #fff;
+                font-family: Helvetica-Bold, Helvetica;
+                font-weight: 700;
+            }
+        </style>
+    </defs>
+    <title>mapa-detalle</title>
+    <image width="1925" height="756" xlink:href="grafica-7_mapa-alto-maipo-.jpg" />
+    <text class="a" transform="translate(173.3 190.74)">El Canelo</text>
+    <text class="a" transform="translate(115.3 394.74)">Las Vertientes</text>
+    <text class="a" transform="translate(391.55 554.11)">San Jose de Maipo</text>
+    <text class="a" transform="translate(684.23 424.55)">Rio Maipo</text>
+    <text class="a" transform="translate(682.4 276.49)">Rio Colorado</text>
+    <text class="a" transform="translate(350.3 204.87)">El Manzano</text>
+    <text class="a" transform="translate(902.38 145.81)"><tspan xml:space="preserve"></tspan></text>
+    <text class="a" transform="translate(861.98 156.94)">Los Maitenes</text>
+    <text class="a" transform="translate(1308.21 587.94)">Laguna Negra</text>
+    <text class="a" transform="translate(1702.04 503.15)">Embalse el Yeso</text>
+    <text class="a" transform="translate(1805.06 45.53)">N</text>
+    <text class="a" transform="translate(1805.06 158.53)">O</text>
+    <text class="a" transform="translate(1860.06 100.53)">E</text>
+    <text class="a" transform="translate(1752.06 100.53)">S</text>
+</svg>

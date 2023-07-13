@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1507 633">
+    <defs>
+        <style>
+            .a {
+                font-size: 20px;
+            }
+            .a,
+            .c,
+            .d,
+            .e {
+                font-family: Helvetica-Bold, Helvetica;
+                font-weight: 700;
+            }
+            .b,
+            .d,
+            .e {
+                font-size: 18px;
+            }
+            .b {
+                font-family: Helvetica;
+            }
+            .c {
+                font-size: 12px;
+            }
+            .c,
+            .e {
+                fill: #fff;
+            }
+        </style>
+    </defs>
+    <title>mapa-estanques-final</title>
+    <image width="1507" height="633" xlink:href="../img/graficas-estanques-final.jpg" />
+    <text class="a" transform="translate(998 348.38)">Estanques</text>
+    <text class="a" transform="translate(83 326.38)">Planta de Tratamiento</text>
+    <text class="b" transform="translate(110 48.96)">Río Maipo</text>
+    <text class="b" transform="translate(110 90.96)">Camino Cajón del Maipo</text>
+    <text class="d" transform="translate(603 191.94)">5 km</text>
+    <text class="e" transform="translate(1275 546.94)">900 m</text>
+</svg>
